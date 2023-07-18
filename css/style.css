@@ -592,7 +592,7 @@ table {
 .hero {
 	background: url('../img/annex.jpg') right no-repeat;
 	background-size: contain;
-	padding: 110px 0 100px 0;
+	padding: 110px 75em 100px 0;
 	height: auto;
 	background-color: #191919;
 
@@ -745,7 +745,7 @@ h1.arrow span {
 }
 
 .color-bg {
-	background: rgb(113,92,125);
+	background: rgb(113, 92, 125);
 }
 
 .color-bg a {
