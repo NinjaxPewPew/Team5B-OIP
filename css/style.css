@@ -589,6 +589,10 @@ table {
 }
 
 /* ==========================================================================Hero========================================================================== */
+#hero {
+	height: 100vh;
+}
+
 .hero {
 	background: url('../img/annex.jpg') right no-repeat;
 	background-size: contain;
@@ -599,7 +603,8 @@ table {
 }
 
 .hero h1 {
-	font-size: 120px;
+	padding-top: 200px;
+	font-size: 117px;
 	letter-spacing: -8px;
 	margin: auto;
 	font-weight: 600;
