@@ -592,7 +592,7 @@ table {
 .hero {
 	background: url('../img/annex.jpg') right no-repeat;
 	background-size: contain;
-	padding: 110px 75em 100px 0;
+	padding: 110px 60em 100px 0;
 	height: auto;
 	background-color: #191919;
 
@@ -768,7 +768,7 @@ h1.arrow span {
 
 .color-bg .weight-outline-btn:hover {
 	background: #FFF;
-	color: #E04343;
+	color: #715C7D;
 	border-color: rgba(0, 0, 0, 0);
 }
 
@@ -810,13 +810,13 @@ h1.arrow span {
 	margin-bottom: 40px;
 	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
-	border: 1px solid #E04343;
-	color: #E04343;
+	border: 1px solid #715C7D;
+	color: #715C7D;
 }
 
 .services .item:hover .icon {
-	background: #E04343;
-	border: 1px solid #E04343;
+	background: #715C7D;
+	border: 1px solid #715C7D;
 }
 
 .services .item [class*=fa] {
