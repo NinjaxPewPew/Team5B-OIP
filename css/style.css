@@ -592,14 +592,14 @@ table {
 .hero {
 	background: url('../img/annex.jpg') right no-repeat;
 	background-size: contain;
-	padding: 110px 60em 100px 0;
+	padding: 120px 60em 100px 0;
 	height: auto;
 	background-color: #191919;
 
 }
 
 .hero h1 {
-	font-size: 120px;
+	font-size: 100px;
 	letter-spacing: -8px;
 	margin: auto;
 	font-weight: 600;
