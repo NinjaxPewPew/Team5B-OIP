@@ -137,6 +137,11 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* make scrollbar transparent */
+}
+
 /* ==========================================================================Links========================================================================== */
 a:focus {
 	outline: thin dotted;
@@ -467,8 +472,8 @@ table {
 .menu-button,
 .menu-wrap {
 	position: fixed;
-	width: 2.5em;
-	height: 2.25em;
+	width: 3em;
+	height: 2.75em;
 	font-size: 1.5em;
 	-webkit-transform: translate3d(1.5em, 1.5em, 0);
 	transform: translate3d(1.5em, 1.5em, 0);
@@ -526,7 +531,7 @@ table {
 	padding: 0 0.2em;
 	margin: 0 15px;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.7em;
 	color: #ffffff;
 }
 
