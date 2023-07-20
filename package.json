@@ -1,27 +1,5 @@
 {
-  "name": "oip-portfoilo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NinjaxPewPew/Team5B-OIP.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NinjaxPewPew/Team5B-OIP/issues"
-  },
-  "homepage": "https://github.com/NinjaxPewPew/Team5B-OIP#readme",
-  "dependencies": {
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "express-ejs-layouts": "^2.5.1",
-    "nodemon": "^3.0.1"
+  "devDependencies": {
+    "prettier": "^3.0.0"
   }
 }
