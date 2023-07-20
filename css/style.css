@@ -443,13 +443,13 @@ table {
 }
 
 /* ==========================================================================Navigation========================================================================== */
-.menu-wrap a {
+.menu a {
 	color: #555d7c;
 	outline: none !important;
 }
 
-.menu-wrap a:hover,
-.menu-wrap a:focus {
+.menu a:hover,
+.menu a:focus {
 	color: #715C7D;
 }
 
@@ -468,9 +468,8 @@ table {
 	padding-bottom: 12em;
 }
 
-/* Common styles for menu button and menu-wrap */
-.menu-button,
-.menu-wrap {
+/* Common styles for menu button*/
+.menu-button{
 	position: fixed;
 	width: 3em;
 	height: 2.75em;
@@ -505,28 +504,24 @@ table {
 }
 
 /* Menu */
-.menu-wrap {
-	z-index: 999;
-	background: rgb(25, 25, 25);
-	-webkit-transition: width 0.4s, height 0.4s, -webkit-transform 0.4s;
-	transition: width 0.4s, height 0.4s, transform 0.4s;
-	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
 
 .menu {
-	height: 100%;
+	position: fixed;
+	width: 100%;
+	height: auto;
 	overflow: hidden;
-	font-size: 0.75em;
+	z-index: 999;
+	background: rgb(25, 25, 25);
 }
 
 .icon-list {
 	float: right;
 	padding: 2.5em 2em 0 6em;
+	margin-bottom: 60px;
 }
 
 .icon-list a {
-	opacity: 0;
+	opacity: 1;
 	display: inline-block;
 	padding: 0 0.2em;
 	margin: 0 15px;
@@ -552,7 +547,7 @@ table {
 	transform: translate3d(0, 125px, 0);
 }
 
-.show-menu .menu-wrap {
+.show-menu {
 	width: 100%;
 	height: 125px;
 	-webkit-transform: translate3d(0, 0, 0);
@@ -797,7 +792,7 @@ h1.arrow span {
 
 /* ==========================================================================Services========================================================================== */
 #service {
-	background-color: #585858;
+	background-color: #715C7D;
 	height: 100vh;
 }
 
@@ -1320,7 +1315,7 @@ ul.slides li {
 		margin-bottom: 10px;
 	}
 
-	.show-menu .menu-wrap {
+	.show-menu {
 		height: 100%;
 	}
 }
