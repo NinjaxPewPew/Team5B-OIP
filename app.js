@@ -1,23 +1,53 @@
-const express = require("express")
+const express = require("express"),
+    expressLayouts = require("express-ejs-layouts");
     // mysql = require("mysql2"),
     // path = require("path"),
     // route = require("./routes"),
-    // expressLayouts = require("express-ejs-layouts");
+
     
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 //connect to public folder holding css
 app.use(express.static(__dirname + "/public"));
-// app.use(expressLayouts);
+app.use(expressLayouts);
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// use res.render to load up an ejs view file
 //render home page
 app.get("/", (req, res) => {
         res.render("home");
+})
+
+//render about us page
+app.get("/aboutUs", (req, res) => {
+        res.render("aboutUs");
+})
+
+//render history page
+app.get("/history", (req, res) => {
+        res.render("history");
+})
+
+//render art page
+app.get("/art", (req, res) => {
+        res.render("art");
+})
+
+//render event page
+app.get("/event", (req, res) => {
+        res.render("event");
+})
+
+//render forum page
+app.get("/forum", (req, res) => {
+        res.render("forum");
+})
+
+//render classes page
+app.get("/classes", (req, res) => {
+        res.render("classes");
 })
 
 
