@@ -1400,3 +1400,22 @@ section {
     width: 100% !important;
   }
 }
+
+/* art */
+.artCard {
+  width: 100%;
+}
+
+.artCardHeader {
+  margin: 0 auto;
+}
+
+.artCardImg {
+  height: 400px;
+  overflow: hidden;
+}
+
+.sliderBtn {
+  background-color: black;
+  border-radius: 50%;
+}
