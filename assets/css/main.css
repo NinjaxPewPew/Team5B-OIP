@@ -1298,3 +1298,105 @@ section {
 .footer .credits a {
   color: var(--color-white);
 }
+
+/* audio */
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.audio-player audio {
+  display: none;
+}
+
+.audio-icon {
+  font-size: 55px;
+  /* Adjust the size as needed */
+}
+
+.card-title {
+  height: 3em;
+  /* adjust as needed */
+  overflow: hidden;
+}
+
+/* about us phone view */
+@media (min-width: 768px) {
+  .card1 {
+    margin-left: 40px;
+  }
+
+  .card2 {
+    margin-top: 21px;
+    margin-left: 100px;
+  }
+
+  .card3 {
+    margin-top: 21px;
+    margin-left: 160px;
+  }
+
+  .card4 {
+    margin-top: 21px;
+    margin-left: 220px;
+  }
+
+  .card5 {
+    margin-top: 21px;
+    margin-left: 280px;
+  }
+
+  .card6 {
+    margin-top: 21px;
+    margin-left: 340px;
+  }
+
+  .card7 {
+    margin-top: 21px;
+    margin-left: 400px;
+  }
+
+  .staffcard1 {
+    margin-left: 33px;
+  }
+
+  .staffcard2 {
+    margin-left: 107px;
+  }
+
+  .staffcard3 {
+    margin-left: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card1 {
+    width: 100% !important;
+  }
+
+  .card2 {
+    width: 100% !important;
+  }
+
+  .card3 {
+    width: 100% !important;
+  }
+
+  .card4 {
+    width: 100% !important;
+  }
+
+  .card5 {
+    width: 100% !important;
+  }
+
+  .card6 {
+    width: 100% !important;
+  }
+
+  .card7 {
+    width: 100% !important;
+  }
+}

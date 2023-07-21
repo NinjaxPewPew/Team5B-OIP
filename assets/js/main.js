@@ -152,3 +152,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+//audio
+const audioPlayers = document.querySelectorAll('.audio-player audio');
+
+audioPlayers.forEach((audioPlayer) => {
+  audioPlayer.addEventListener('play', () => {
+    audioPlayer.parentElement.classList.add('playing');
+  });
+
+  audioPlayer.addEventListener('pause', () => {
+    audioPlayer.parentElement.classList.remove('playing');
+  });
+
+  audioPlayer.parentElement.addEventListener('click', () => {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+    } else {
+      audioPlayer.pause();
+    }
+  });
+});
