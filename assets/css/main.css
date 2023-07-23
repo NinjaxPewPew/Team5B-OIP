@@ -459,13 +459,19 @@ section {
   height: 200px;
   border-radius: 50%;
   text-align: center;
-  font-size: 24px; /* Larger text for the big button */
-  font-weight: bold; /* Bolder text for more emphasis */
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+  font-size: 24px;
+  /* Larger text for the big button */
+  font-weight: bold;
+  /* Bolder text for more emphasis */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  /* Added transition for box-shadow */
   display: flex;
-  flex-direction: column;  /* Stack child elements vertically */
-  justify-content: center; /* Center child elements vertically */
-  align-items: center;     /* Center child elements horizontally */
+  flex-direction: column;
+  /* Stack child elements vertically */
+  justify-content: center;
+  /* Center child elements vertically */
+  align-items: center;
+  /* Center child elements horizontally */
 }
 
 .circle-btn:hover {
@@ -475,13 +481,17 @@ section {
 
 .circle-btn:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* A blue glow around the button on focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  /* A blue glow around the button on focus */
 }
 
-.circle-btn .bi{
-  font-size: 40px; /* Adjust the size as needed */
-  margin-bottom: 10px; /* Space between the icon and the text */
+.circle-btn .bi {
+  font-size: 40px;
+  /* Adjust the size as needed */
+  margin-bottom: 10px;
+  /* Space between the icon and the text */
 }
+
 /*--------------------------------------------------------------
 # Posts
 --------------------------------------------------------------*/
@@ -1450,4 +1460,14 @@ section {
 .sliderBtn {
   background-color: black;
   border-radius: 50%;
+}
+
+.list-group-item {
+  background-color: white;
+  transition: background-color 0.3s ease;
+
+}
+
+.list-group-item:hover {
+  background-color: lightgray;
 }
