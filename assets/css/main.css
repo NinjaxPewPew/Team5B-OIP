@@ -1471,3 +1471,58 @@ section {
 .list-group-item:hover {
   background-color: lightgray;
 }
+
+/* Events */
+.posterContainer {
+  border: 1px solid #ccc;
+}
+
+.poster {
+  width: 75%;
+  border: 1px solid #ccc;
+}
+
+/* calendar */
+.calendar {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.days div {
+  text-align: center;
+  padding: 5px;
+  font-size: 23px;
+}
+
+.days div.prev-month,
+.days div.next-month {
+  color: #ccc;
+}
+
+.poster-date {
+  background-color: #ccc;
+  /* You can change this to your preferred color */
+}
