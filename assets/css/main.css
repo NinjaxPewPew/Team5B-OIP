@@ -119,8 +119,8 @@ section {
 }
 
 .btn.btn-primary {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   border-color: var(--color-black);
 }
 
@@ -453,20 +453,35 @@ section {
 /*--------------------------------------------------------------
 # Circle Buttons
 --------------------------------------------------------------*/
+
 .circle-btn {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   text-align: center;
-  line-height: 150px;
-  transition: background-color 0.3s, color 0.3s;
+  font-size: 24px; /* Larger text for the big button */
+  font-weight: bold; /* Bolder text for more emphasis */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+  display: flex;
+  flex-direction: column;  /* Stack child elements vertically */
+  justify-content: center; /* Center child elements vertically */
+  align-items: center;     /* Center child elements horizontally */
 }
 
 .circle-btn:hover {
-  background-color: #007bff;  /* This is a sample color, adjust as desired */
-  color: white;  /* This will change the text color on hover */
+  background-color: #715c7D;
+  color: white;
 }
 
+.circle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* A blue glow around the button on focus */
+}
+
+.circle-btn .bi{
+  font-size: 40px; /* Adjust the size as needed */
+  margin-bottom: 10px; /* Space between the icon and the text */
+}
 /*--------------------------------------------------------------
 # Posts
 --------------------------------------------------------------*/
