@@ -121,7 +121,7 @@ section {
 .btn.btn-primary {
   background-color: var(--color-white);
   color: var(--color-black);
-  border-color: var(--color-black);
+  border: 1.5px solid var(--color-black);
 }
 
 /*--------------------------------------------------------------
