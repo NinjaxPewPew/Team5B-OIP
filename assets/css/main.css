@@ -482,6 +482,30 @@ section {
   font-size: 40px; /* Adjust the size as needed */
   margin-bottom: 10px; /* Space between the icon and the text */
 }
+
+/*--------------------------------------------------------------
+# Round edge Buttons
+--------------------------------------------------------------*/
+/* Mobile-first approach: styles for mobile devices by default. */
+.btn-rounded {
+  display: block;
+  max-width: 300px; /* or whatever your design dictates */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkorchid;
+  color: white;
+}
+
+.btn-rounded:hover {
+  background-color: rgb(122, 40, 163);
+  color: white;
+}
+
+.btn-rounded:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* A blue glow around the button on focus */
+}
+
 /*--------------------------------------------------------------
 # Posts
 --------------------------------------------------------------*/
@@ -832,6 +856,45 @@ section {
 
 .category-title {
   border-bottom: none;
+}
+
+/* Customizing the general pagination container */
+.pagination {
+  margin: 20px 0;
+}
+
+/* Customizing the individual page links */
+.pagination .page-link {
+  border: 1px solid #000;  /* Border color set to black */
+  color: #000;            /* Font color set to black */
+  transition: background-color 0.3s, border-color 0.3s; 
+}
+
+/* Add a hover effect to the page links */
+.pagination .page-link:hover {
+  background-color: #ddd;  /* Background color when hovered */
+  color: #000;             /* Keeping the font color black when hovered */
+  border-color: #000;
+}
+
+/* Active page number styling */
+.pagination .page-item.active .page-link {
+  background-color: #000;  /* Active page background color set to black */
+  border-color: #000;
+  color: white;            /* Font color set to white for active page */
+}
+
+/* Optional: styling for the "Previous" and "Next" text links */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+  background-color: #f7f7f7; 
+  border: 1px solid #ddd;
+}
+
+.pagination .page-item:first-child .page-link:hover,
+.pagination .page-item:last-child .page-link:hover {
+  background-color: #ddd;
+  color: #000;            /* Keeping the font color black for "Previous" and "Next" when hovered */
 }
 
 .custom-pagination a {

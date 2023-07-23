@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Forum</title>
+  <title>Edit post</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -53,8 +53,8 @@
 
           <li class="dropdown"><a href="#"><span>Activities</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="event.html">Events</a></li>
-              <li><a href="class.html">Classes</a></li>
+              <li><a href="../event.html">Events</a></li>
+              <li><a href="../class.html">Classes</a></li>
             </ul>
           </li>
           
@@ -84,79 +84,43 @@
   </header><!-- End Header -->
 
   <main id="main">
+    <section id="contact" class="contact mb-5">
+      <div class="container" data-aos="fade-up">
 
-    <section class="single-post-content">
-      <div class="container">
         <div class="row">
-          <div class="col-md-9 post-content" data-aos="fade-up">
-
-            <!-- ======= Single Post Content ======= -->
-            <div class="single-post">
-              <div class="post-meta"><span class="date">Art</span> <span class="mx-1">&bullet;</span> <span>Jul 19th '23</span></div>
-              <h1 class="mb-5">A Glimpse into the Soulful Artistry of Annexe Communities</h1>
-              <p><span class="firstcharacter">O</span>ur visit to the Annexe Communities was a revelation of the beauty that arises from human creativity and resilience. As we explored the space, we were immersed in a world of art that spoke to our hearts and minds, each piece carrying a unique narrative of struggle and triumph.</p>
-
-              <figure class="my-4">
-                <img src="assets/img/post1.jpg" alt="" class="img-fluid">
-                <figcaption>Art pieces drawn by the talents on windows </figcaption>
-              </figure>
-              <p>The legacy left behind by the talents who had passed away was awe-inspiring, reminding us of the lasting impact art can have on generations to come. Witnessing the living talents in action, sharing their skills and knowledge with one another, was a testament to the power of community and the nurturing environment cultivated within the Annexe Communities.</p>
-              <figure class="my-4">
-                <img src="assets/img/post2.jpg" alt="" class="img-fluid">
-                <figcaption>More art pieces drawn by the talents </figcaption>
-              </figure>
-              <p>The friendly staff, with their warm smiles and enthusiastic guidance, played a crucial role in making our visit a truly unforgettable experience. Their dedication to fostering an environment where creativity thrives was evident in the way they interacted with the talents and visitors alike. The atmosphere of support and encouragement was palpable, and it was clear that the staff's genuine belief in the transformative power of art had a profound effect on the talents they mentored. Leaving the Annexe Communities, we carried with us a renewed appreciation for the profound impact of art in all its forms and the importance of fostering a community that nurtures and celebrates the artistic spirit.</p>
-            </div><!-- End Single Post Content -->
-
-            <nav aria-label="Page navigation">
-              <ul class="pagination justify-content-center">
-                <li class="page-item"><a class="page-link" href="forum.html">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="forum.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="next.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="next.html">Next</a></li>
-              </ul>
-            </nav>
-
-          </div>
-
-          <div class="col-md-3">
-            <!-- ======= Sidebar ======= -->
-
-            <div class="aside-block">
-              <h3 class="aside-title">Click here to publish on forum</h3>
-              <div class="video-post d-flex justify-content-center">
-                <a href="forum_create.html" class="btn btn-rounded">Click HERE!</a>
-              </div>
-            </div>
-
-            <div class="aside-block">
-              <h3 class="aside-title">Categories</h3>
-              <ul class="aside-links list-unstyled">
-                <li><a href="#"><i class="bi bi-chevron-right"></i> History</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right"></i> Art</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right"></i> Event</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right"></i> Class</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right"></i> Cafe</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right"></i> Garden</a></li>
-              </ul>
-            </div>
-
-            <div class="aside-block">
-              <h3 class="aside-title">Tags</h3>
-              <ul class="aside-tags list-unstyled"> 
-                <li><a href="#">History</a></li>
-                <li><a href="#">Art</a></li>
-                <li><a href="#">Event</a></li>
-                <li><a href="#">Class</a></li>
-                <li><a href="#">Cafe</a></li>
-                <li><a href="#">Garden</a></li>
-              </ul>
-            </div><!-- End Tags -->
-
+          <div class="col-lg-12 text-center mb-5">
+            <h1 class="page-title">Publish post on Forum</h1>
           </div>
         </div>
+
+        <div class="form mt-5">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div><!-- End Contact Form -->
+
       </div>
     </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
