@@ -311,5 +311,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   prevSelectedDate = selectedDate;
 }
+
+  prevBtn.addEventListener('click', function () {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    updateCalendar();
+  });
+
+  nextBtn.addEventListener('click', function () {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    updateCalendar();
+  });
+
   updateCalendar();
 });
