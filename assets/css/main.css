@@ -1483,11 +1483,16 @@ section {
 }
 
 /* calendar */
+.calendar-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .calendar {
-  margin: 0 auto;
+  margin-left: auto;
   padding: 10px;
   border: 1px solid #ccc;
-  width: 80%;
+  width: 97%;
   height: 100%;
 }
 
