@@ -1364,6 +1364,16 @@ section {
   overflow: hidden;
 }
 
+.thumbnail1 {
+  padding-top: 70px;
+}
+
+
+.thumbnailImgMargin {
+  margin-left: 70px;
+  width: 100%;
+}
+
 /* about us phone view */
 @media (min-width: 768px) {
   .card1 {
@@ -1530,4 +1540,9 @@ section {
 .poster-date {
   background-color: #ccc;
   /* You can change this to your preferred color */
+}
+
+/* Class */
+.summerEventImg {
+  width: 60%;
 }
