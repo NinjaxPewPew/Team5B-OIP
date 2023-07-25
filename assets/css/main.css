@@ -509,6 +509,24 @@ section {
 /*--------------------------------------------------------------
 # Posts
 --------------------------------------------------------------*/
+.single-post img.img-fluid {
+  max-width: 80%; /* or any other percentage or fixed value you prefer */
+  display: block; /* to make sure it's a block element */
+  margin: 0 auto; /* to center it */
+}
+
+figure img.img-fluid {
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+
+figure figcaption {
+  display: block; 
+  text-align: center; 
+  margin-top: 10px; 
+}
+
 .post-entry-1 {
   margin-bottom: 30px;
 }
@@ -1235,6 +1253,13 @@ section {
   padding: 15px;
 }
 
+.contact .php-email-form .loading {
+  display: none;
+  background: var(--color-white);
+  text-align: center;
+  padding: 15px;
+}
+
 .contact .php-email-form .loading:before {
   content: "";
   display: inline-block;
@@ -1513,4 +1538,12 @@ section {
 .sliderBtn {
   background-color: black;
   border-radius: 50%;
+}
+
+.loading {
+  opacity: 1;
+  transition: opacity 2s; /* 2 seconds fade out */
+}
+.loading.hide {
+  opacity: 0;
 }
