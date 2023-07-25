@@ -125,18 +125,16 @@
                     <div class="carousel-inner posterContainer">
                         <!-- Default item, it will be replaced by the script if necessary -->
                         <div class="carousel-item active">
-                            <img src="assets/img/default-poster.jpg" class="poster d-block w-100" alt="Default Poster">
+                            <img src="..." class="poster d-block w-100" alt="">
                         </div>
                         <!-- More items can be added dynamically via JavaScript -->
                     </div>
                     <!-- Add previous and next controls -->
                     <a class="carousel-control-prev" href="#posterCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
                     </a>
                     <a class="carousel-control-next" href="#posterCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
                     </a>
                 </div>
             </div>
@@ -473,7 +471,6 @@
               // Deselect the date if it's already selected
               selectedDate = null;
               dayCells.forEach((cell) => cell.classList.remove('selected'));
-              posterContainer.innerHTML = '<img src="assets/img/default-poster.jpg" class="poster" alt="">'; // Set default poster
             } else {
               // Select the date and display the corresponding poster
               selectedDate = clickedDate;
@@ -485,55 +482,39 @@
         });
       }
 
-      function updatePoster() {
-        // Sample data to demonstrate changing poster image based on selected date
-        if (selectedDate) {
-          const adjustedDate = new Date(selectedDate);
-          adjustedDate.setDate(adjustedDate.getDate() + 1);
-          const selectedDateStr = adjustedDate.toISOString().split('T')[0];
-          if (posters[selectedDateStr]) {
-            const images = posters[selectedDateStr];
+        function updatePoster() {
             posterContainer.innerHTML = ''; // Clear any existing content
 
-            images.forEach((imageUrl, index) => {
-                const carouselItem = document.createElement('div');
-                carouselItem.className = index === 0 ? 'carousel-item active' : 'carousel-item'; // Only the first item should have "active" class
+            let imagesToUse;
 
-                const img = document.createElement('img');
-                img.src = imageUrl;
-                img.alt = 'Poster';
-                img.className = 'poster d-block w-100';
+            if (selectedDate) {
+                const adjustedDate = new Date(selectedDate);
+                adjustedDate.setDate(adjustedDate.getDate() + 1);
+                const selectedDateStr = adjustedDate.toISOString().split('T')[0];
+                imagesToUse = posters[selectedDateStr];
+            } else {
+                const currentDateStr = currentDate.toISOString().split('T')[0];
+                imagesToUse = posters[currentDateStr];
+            }
 
-                carouselItem.appendChild(img);
-                posterContainer.appendChild(carouselItem);
-            });
-          } else {
-            // Set default poster when no matching date is found
-            posterContainer.innerHTML = '<img src="assets/img/noEvent.jpg" class="poster" alt="">';
-          }
-        } else {
-          // Check if there is a poster for the current date
-          const currentDateStr = currentDate.toISOString().split('T')[0];
-          if (posters[currentDateStr]) {
-            const images = posters[currentDateStr];
-            posterContainer.innerHTML = ''; // Clear any existing content
+            if (imagesToUse && imagesToUse.length > 0) {
+                imagesToUse.forEach((imageUrl, index) => {
+                    const carouselItem = document.createElement('div');
+                    carouselItem.className = index === 0 ? 'carousel-item active' : 'carousel-item';
 
-            images.forEach((imageUrl) => {
-              const img = document.createElement('img');
-              img.src = imageUrl;
-              img.alt = 'Poster';
-              img.style.width = '75%';
-              img.style.border = '1px solid #ccc';
-              posterContainer.appendChild(img); // Append the new image
-            });
-          } else {
-            // Set default poster when no date is selected
-            posterContainer.innerHTML = '<img src="assets/img/default-poster.jpg" class="poster" alt="">';
-          }
+                    const img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = 'Poster';
+                    img.className = 'poster d-block w-100';
+
+                    carouselItem.appendChild(img);
+                    posterContainer.appendChild(carouselItem);
+                });
+            } 
+
+            prevSelectedDate = selectedDate;
         }
 
-        prevSelectedDate = selectedDate;
-      }
 
       prevBtn.addEventListener('click', function () {
         currentDate.setMonth(currentDate.getMonth() - 1);

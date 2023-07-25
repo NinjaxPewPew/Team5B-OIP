@@ -1615,10 +1615,16 @@ section {
     content: '\276E';  /* Left arrow for 'previous' control */
     font-size: 30px;
     color: black;
+    transition: color 0.3s ease;  /* This line adds a smooth transition */
 }
 
 .carousel-control-next-icon::before {
     content: '\276F';  /* Right arrow for 'next' control */
+}
+
+.carousel-control-prev-icon:active::before,
+.carousel-control-next-icon:active::before {
+    color: gray;  /* Adjust the color to your desired active color */
 }
 
 .carousel-control-prev, 
