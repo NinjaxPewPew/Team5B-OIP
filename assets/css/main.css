@@ -1492,6 +1492,7 @@ section {
   border: 1px solid #ccc;
 }
 
+
 /* calendar */
 .calendar-container {
   display: flex;
@@ -1605,29 +1606,50 @@ section {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: transparent; /* Remove the default white background */
-    background-image: none;       /* Remove the default arrow images */
-    transform: translateY(50%);
+  background-color: transparent;
+  /* Remove the default white background */
+  background-image: none;
+  /* Remove the default arrow images */
+  transform: translateY(50%);
 }
 
 .carousel-control-prev-icon::before,
 .carousel-control-next-icon::before {
-    content: '\276E';  /* Left arrow for 'previous' control */
-    font-size: 30px;
-    color: black;
-    transition: color 0.3s ease;  /* This line adds a smooth transition */
+  content: '\276E';
+  /* Left arrow for 'previous' control */
+  font-size: 30px;
+  color: black;
+  transition: color 0.3s ease;
+  /* This line adds a smooth transition */
 }
 
 .carousel-control-next-icon::before {
-    content: '\276F';  /* Right arrow for 'next' control */
+  content: '\276F';
+  /* Right arrow for 'next' control */
 }
 
 .carousel-control-prev-icon:active::before,
 .carousel-control-next-icon:active::before {
-    color: gray;  /* Adjust the color to your desired active color */
+  color: gray;
+  /* Adjust the color to your desired active color */
 }
 
-.carousel-control-prev, 
+.carousel-control-prev,
 .carousel-control-next {
-    filter: none;  /* Remove potential shadow or gradient */
+  pointer-events: auto;
+}
+
+.posterButton {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.carousel-inner .carousel-item img {
+  position: relative;
+  z-index: 1;
 }
