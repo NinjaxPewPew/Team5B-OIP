@@ -1602,3 +1602,26 @@ section {
     width: 40%;
   }
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* Remove the default white background */
+    background-image: none;       /* Remove the default arrow images */
+    transform: translateY(50%);
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    content: '\276E';  /* Left arrow for 'previous' control */
+    font-size: 30px;
+    color: black;
+}
+
+.carousel-control-next-icon::before {
+    content: '\276F';  /* Right arrow for 'next' control */
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    filter: none;  /* Remove potential shadow or gradient */
+}
