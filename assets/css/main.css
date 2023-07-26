@@ -43,6 +43,10 @@ h6 {
   margin-top: 90px;
 }
 
+p {
+  font-size: 20px;
+}
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -498,7 +502,8 @@ section {
 /* Mobile-first approach: styles for mobile devices by default. */
 .btn-rounded {
   display: block;
-  max-width: 300px; /* or whatever your design dictates */
+  max-width: 300px;
+  /* or whatever your design dictates */
   margin-left: auto;
   margin-right: auto;
   background-color: darkorchid;
@@ -512,28 +517,32 @@ section {
 
 .btn-rounded:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* A blue glow around the button on focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  /* A blue glow around the button on focus */
 }
 
 /*--------------------------------------------------------------
 # Posts
 --------------------------------------------------------------*/
 .single-post img.img-fluid {
-  max-width: 80%; /* or any other percentage or fixed value you prefer */
-  display: block; /* to make sure it's a block element */
-  margin: 0 auto; /* to center it */
+  max-width: 80%;
+  /* or any other percentage or fixed value you prefer */
+  display: block;
+  /* to make sure it's a block element */
+  margin: 0 auto;
+  /* to center it */
 }
 
 figure img.img-fluid {
-  display: block; 
-  width: 100%; 
-  height: auto; 
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 figure figcaption {
-  display: block; 
-  text-align: center; 
-  margin-top: 10px; 
+  display: block;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .post-entry-1 {
@@ -892,36 +901,43 @@ figure figcaption {
 
 /* Customizing the individual page links */
 .pagination .page-link {
-  border: 1px solid #000;  /* Border color set to black */
-  color: #000;            /* Font color set to black */
-  transition: background-color 0.3s, border-color 0.3s; 
+  border: 1px solid #000;
+  /* Border color set to black */
+  color: #000;
+  /* Font color set to black */
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 /* Add a hover effect to the page links */
 .pagination .page-link:hover {
-  background-color: #ddd;  /* Background color when hovered */
-  color: #000;             /* Keeping the font color black when hovered */
+  background-color: #ddd;
+  /* Background color when hovered */
+  color: #000;
+  /* Keeping the font color black when hovered */
   border-color: #000;
 }
 
 /* Active page number styling */
 .pagination .page-item.active .page-link {
-  background-color: #000;  /* Active page background color set to black */
+  background-color: #000;
+  /* Active page background color set to black */
   border-color: #000;
-  color: white;            /* Font color set to white for active page */
+  color: white;
+  /* Font color set to white for active page */
 }
 
 /* Optional: styling for the "Previous" and "Next" text links */
 .pagination .page-item:first-child .page-link,
 .pagination .page-item:last-child .page-link {
-  background-color: #f7f7f7; 
+  background-color: #f7f7f7;
   border: 1px solid #ddd;
 }
 
 .pagination .page-item:first-child .page-link:hover,
 .pagination .page-item:last-child .page-link:hover {
   background-color: #ddd;
-  color: #000;            /* Keeping the font color black for "Previous" and "Next" when hovered */
+  color: #000;
+  /* Keeping the font color black for "Previous" and "Next" when hovered */
 }
 
 .custom-pagination a {
@@ -1436,6 +1452,14 @@ figure figcaption {
   cursor: pointer;
 }
 
+.audio-player-box {
+  border: 2px solid grey;
+  width: 220px;
+  border-radius: 5%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
 .audio-player audio {
   display: none;
 }
@@ -1747,7 +1771,8 @@ figure figcaption {
 
 .loading {
   opacity: 1;
-  transition: opacity 2s; /* 2 seconds fade out */
+  transition: opacity 2s;
+  /* 2 seconds fade out */
 }
 
 .loading.hide {
