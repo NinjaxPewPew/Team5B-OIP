@@ -1778,3 +1778,22 @@ figure figcaption {
 .loading.hide {
   opacity: 0;
 }
+
+.newItem {
+  width: 18%;
+  border-radius: 5%;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  transition: background-color 0.3s ease;
+}
+
+.newItem:hover {
+  background-color: #ddd;
+}
+
+.underline {
+  border-bottom: 1px solid #000;
+  display: inline-block;
+
+}
