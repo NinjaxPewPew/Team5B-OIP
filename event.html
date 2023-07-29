@@ -482,7 +482,9 @@
         .then((data) => {
           const parser = new DOMParser();
           const htmlDocument = parser.parseFromString(data, "text/html");
-          const imageFiles = Array.from(htmlDocument.querySelectorAll("a")).map((a) => a.href);
+          const imageFiles = Array.from(htmlDocument.querySelectorAll("a"))
+            .map((a) => a.href)
+            .filter((url) => url.endsWith(".jpg") || url.endsWith(".png") || url.endsWith(".jpeg"));
 
           // Filter the existing image files
           const existingImageFiles = [];
