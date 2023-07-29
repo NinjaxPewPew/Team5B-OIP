@@ -152,11 +152,11 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+        //lazy loading
         const imagePath = "assets/img/30years/";
-
         const images = [];
 
-        for (let i = 1; i <= 124; i++) {
+        for (let i = 1; i <= 123; i++) {
             const filename = `${i}.jpg`;
             images.push(filename);
         }
@@ -170,6 +170,14 @@
                 thumbnail.className = "thumbnail";
 
                 const thumbnailImg = document.createElement("img");
+
+                // Add the "loading" attribute for lazy loading
+                thumbnailImg.loading = "lazy";
+
+                // Preload the image to improve loading speed
+                const imgPreload = new Image();
+                imgPreload.src = `${imagePath}${image}`;
+
                 thumbnailImg.src = `${imagePath}${image}`;
                 thumbnailImg.alt = `Thumbnail ${image}`;
 
