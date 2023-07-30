@@ -6,11 +6,11 @@ Team5B-TheAnnexeArchive is a web-based project that aims to create an online arc
 
 ## Features
 
-- **Digital Preservation:** The archive will digitize and store historical documents, photographs, audio recordings, videos, and other artifacts to ensure their long-term preservation and prevent physical degradation.
+- **Digital Preservation:** The archive will digitize and store historical documents, photographs, and other artifacts to ensure their long-term preservation and prevent physical degradation.
 
 - **Interactive User Interface:** Using HTML as the primary tool, the web-based archive will provide an interactive and user-friendly interface for easy navigation and exploration.
 
-- **Rich Media Display:** HTML will enable the incorporation of multimedia elements, allowing users to access and view historical photos, videos, and audio recordings, enhancing their understanding of The Annexe's history.
+- **Rich Media Display:** HTML will enable the incorporation of multimedia elements, allowing users to access and view historical photos, enhancing their understanding of The Annexe's history.
 
 - **Text-to-Speech (TTS):** The archive will include a TTS function that allows users to listen to the text content, providing an audio playback option for enhanced accessibility.
 
