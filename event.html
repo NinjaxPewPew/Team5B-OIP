@@ -516,57 +516,6 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    // function fetchAndCreateCarousel(imageFolder, carouselInner) {
-    //   // Function to check if an image file exists
-    //   function imageExists(imageUrl) {
-    //     return new Promise((resolve) => {
-    //       const img = new Image();
-    //       img.onload = () => resolve(true);
-    //       img.onerror = () => resolve(false);
-    //       img.src = imageUrl;
-    //     });
-    //   }
-
-    //   // Fetch the list of image files in the folder
-    //   fetch(imageFolder)
-    //     .then((response) => response.text())
-    //     .then((data) => {
-    //       const parser = new DOMParser();
-    //       const htmlDocument = parser.parseFromString(data, "text/html");
-    //       const imageFiles = Array.from(htmlDocument.querySelectorAll("a"))
-    //         .map((a) => a.href)
-    //         .filter((url) => url.endsWith(".jpg") || url.endsWith(".png") || url.endsWith(".jpeg"));
-
-    //       // Filter the existing image files
-    //       const existingImageFiles = [];
-    //       Promise.all(imageFiles.map(imageExists))
-    //         .then((results) => {
-    //           for (let i = 0; i < results.length; i++) {
-    //             if (results[i]) {
-    //               existingImageFiles.push(imageFiles[i]);
-    //             }
-    //           }
-
-    //           for (let i = 0; i < existingImageFiles.length; i++) {
-    //             // Create carousel items
-    //             const carouselItem = document.createElement("div");
-    //             carouselItem.classList.add("carousel-item", "text-center");
-    //             if (i === 0) {
-    //               carouselItem.classList.add("active");
-    //             }
-
-    //             const img = document.createElement("img");
-    //             img.setAttribute("src", existingImageFiles[i]);
-    //             img.classList.add("d-block", "mx-auto", "artCardImg");
-    //             carouselItem.appendChild(img);
-
-    //             carouselInner.appendChild(carouselItem);
-    //           }
-    //         })
-    //         .catch((error) => console.error(error));
-    //     })
-    //     .catch((error) => console.error(error));
-    // }
 
     document.addEventListener('DOMContentLoaded', function () {
       const prevBtn = document.getElementById('prevBtn');
@@ -772,21 +721,7 @@
       }
 
       setActiveDot(); // Set the initial active dot
-
-
-      // const carouselInner = document.getElementById("carouselInner");
-      // const imageFolder = "https://ninjaxpewpew.github.io/assets/img/30years/";
-      // fetchAndCreateCarousel(imageFolder, carouselInner);
-
-      // // Next carousel
-      // const carouselInner2 = document.getElementById("carouselInner2");
-      // const imageFolder2 = "assets/img/30years/";
-      // fetchAndCreateCarousel(imageFolder2, carouselInner2);
-
-      // const carouselInner3 = document.getElementById("carouselInner3");
-      // const imageFolder3 = "assets/img/partickPluckers/";
-      // fetchAndCreateCarousel(imageFolder3, carouselInner3);
-
+      
     });
 
   </script>

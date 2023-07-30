@@ -27,5 +27,5 @@ def rename_files_increasing_numeric(folder_path):
 
 if __name__ == "__main__":
     # Replace with the path to your folder
-    folder_path = "assets/img/partickPluckers/"
+    folder_path = "assets/img/stainedGlassWindow/"
     rename_files_increasing_numeric(folder_path)
