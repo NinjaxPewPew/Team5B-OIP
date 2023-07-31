@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Login - Annexe Communities Archives</title>
+  <title>Create post</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -32,42 +32,22 @@
 </head>
 
 <body>
-<!-- ======= Header ======= -->
-<header id="header" class="header d-flex align-items-center fixed-top">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="admin_index.html" class="logo d-flex align-items-center">
         <img src="assets/img/a.png" alt="">
         <h1>The Annexe Communities Archives</h1>
       </a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="art.html">Art</a></li>
-          <li><a href="forum.html">Forum</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-          <li><a href="login.html" id="loginButton">Login</a></li>
-
-          <li class="dropdown"><a href="#"><span>Activities</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="event.html">Events</a></li>
-              <li><a href="class.html">Classes</a></li>
-            </ul>
-          </li>
-          
-        </ul>
-      </nav><!-- .navbar -->
-
       <div class="position-relative">
+        <a href="#" class="mx-2 js-search-open"></a>
+        <i class="bi bi-list mobile-nav-toggle"></i>
         <a href="https://www.facebook.com/annexepartick/?locale=en_GB" target="_blank" class="mx-2"><span class="bi-facebook"></span></a>
         <a href="https://twitter.com/AnnexeComm?s=20" target="_blank" class="mx-2"><span class="bi-twitter"></span></a>
         <a href="https://www.youtube.com/@AnnexeCommunities" target="_blank" class="mx-2"><span class="bi-youtube"></span></a>
-        
-        <a href="#" class="mx-2 js-search-open"></a>
-        <i class="bi bi-list mobile-nav-toggle"></i>
 
         <!-- ======= Search Form ======= -->
         <div class="search-form-wrap js-search-form-wrap">
@@ -84,23 +64,50 @@
 
   </header><!-- End Header -->
 
-  <main id="main">
-    <div class="container mt-5">
-      <div class="login-container">
-        <h2>Login</h2>
-        <form class="login-form" id="login-form">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required>
-  
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-  
-          <input class="login_btn" type="submit" value="Login">
-        </form>
-      </div>
-    </div>
-  </main>
-    <!-- ======= Footer ======= -->
+<main id="main">
+    <section id="contact" class="contact mb-5">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h1 class="page-title">Create Post</h1>
+                </div>
+            </div>
+
+            <div class="form mt-5">
+                <form action="forms/forum.php" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                    </div>
+
+                    <!-- Added media input -->
+                    <div class="form-group">
+                        <input type="file" name="media" accept="image/*,video/*">
+                    </div>
+
+                    <div class="my-3">
+                      <div class="loading" style="display:none;"></div>
+                      <div class="sent-message">Your post has been submitted. Thank you! <a href="forum.html"> back to forum</a></div>
+                    </div>
+                    <div class="text-center"><button class="btn btn-rounded" type="submit">Submit</button></div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
     <div class="footer-legal">
@@ -145,28 +152,24 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-</body>
 
-<script>
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-  
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-  
-      // Replace the hardcoded admin credentials with your desired values
-      const adminUsername = 'admin';
-      const adminPassword = 'admin123';
-  
-      if (username === adminUsername && password === adminPassword) {
-        // Redirect to the admin dashboard
-        window.location.href = 'admin_index.html';
-        document.getElementById('loginButton').hidden = hidden;
-      } else {
-        // Redirect to the regular user dashboard
-        window.location.href = 'index.html';
-      }
+  <script> 
+    document.querySelector(".php-email-form").addEventListener("submit", function(e) {
+        e.preventDefault(); // prevent the form from submitting normally
+        var loadingElement = document.querySelector(".loading");
+        loadingElement.classList.remove("hide"); // show the loading element
+        loadingElement.addEventListener("transitionend", function() {
+            loadingElement.classList.add("hide"); // hide the loading after the transition
+            document.querySelector(".sent-message").style.display = "block";
+        });
+        
+        // Assuming your form processes in 3 seconds, we'll mimic that with a setTimeout for demonstration.
+        setTimeout(function() {
+            loadingElement.style.opacity = '0'; // trigger the fade-out transition
+        }, 3000);
     });
   </script>
+
+</body>
 
 </html>
