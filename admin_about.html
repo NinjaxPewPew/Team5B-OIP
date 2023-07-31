@@ -39,28 +39,26 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="admin_index.html" class="logo d-flex align-items-center">
         <img src="assets/img/a.png" alt="">
-        <h1 class="logo-text">
-          <span>The Annexe Communities Archives</span>
-        </h1>
+        <h1>The Annexe Communities Archives</h1>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="art.html">Art</a></li>
-          <li><a href="forum.html">Forum</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="admin_index.html">Home</a></li>
+          <li><a href="admin_about.html">About us</a></li>
+          <li><a href="admin_history.html">History</a></li>
+          <li><a href="admin_art.html">Art</a></li>
+          <li><a href="admin_forum.html">Forum</a></li>
+          <li><a href="admin_contact.html">Contact us</a></li>
+          <li><a href="#" id="logoutButton" onclick="logout();">Logout</a></li>
 
           <li class="dropdown"><a href="#"><span>Activities</span> <i
                 class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="event.html">Events</a></li>
-              <li><a href="class.html">Classes</a></li>
+              <li><a href="admin_event.html">Events</a></li>
+              <li><a href="admin_class.html">Classes</a></li>
             </ul>
           </li>
 
@@ -195,7 +193,7 @@
           </div>
 
           <div class="d-md-flex post-entry-2 half mt-5">
-            <a href="#" class="me-4 thumbnail order-2 thumbnail1">
+            <a href="#" class="me-4 thumbnail order-2 ">
               <img src="assets/img/mission.png" alt="" class="img-fluid thumbnailImgMargin">
             </a>
             <div class="pe-md-5 mt-4 mt-md-0">
@@ -543,7 +541,12 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    function logout() {
+      window.location.href = 'index.html';
+      alert('You have successfully logged out.');
+    }
+  </script>
 </body>
 
 </html>
