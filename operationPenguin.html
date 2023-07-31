@@ -97,14 +97,25 @@
                 </div>
             </div>
 
+
             <div class="gallery">
                 <div class="thumbnails"></div>
                 <div class="preview">
                     <img id="" src="" alt="">
                 </div>
             </div>
+
+            <!-- Pagination Container -->
+            <div class="row mt-3 pagination-container">
+                <div class="pagination-dots custom-pagination">
+                    <button id="prevPageBtn" class="pagination-button" style="width:100px">Previous</button>
+                    <button id="nextPageBtn" class="pagination-button" style="width:100px">Next</button>
+                </div>
+            </div>
+
         </section>
     </main><!-- End #main -->
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
@@ -194,6 +205,66 @@
         }
 
         displayThumbnails();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const prevPageBtn = document.getElementById('prevPageBtn');
+            const nextPageBtn = document.getElementById('nextPageBtn');
+
+            // Pagination
+            const thumbnailsContainer = document.querySelector('.thumbnails');
+            const thumbnails = thumbnailsContainer.querySelectorAll('.thumbnail');
+
+            let currentPage = 1;
+            const thumbnailsPerPage = 8; // Adjust this value to the desired number of thumbnails per page
+
+            function showPage(page) {
+                const startIndex = (page - 1) * thumbnailsPerPage;
+                const endIndex = startIndex + thumbnailsPerPage;
+
+                thumbnails.forEach((thumbnail, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        thumbnail.style.display = 'block';
+                    } else {
+                        thumbnail.style.display = 'none';
+                    }
+                });
+            }
+
+            function goToPrevPage() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                    setActiveDot();
+                }
+            }
+
+            function goToNextPage() {
+                const totalPages = Math.ceil(thumbnails.length / thumbnailsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    showPage(currentPage);
+                    setActiveDot();
+                }
+            }
+
+            prevPageBtn.addEventListener('click', goToPrevPage);
+            nextPageBtn.addEventListener('click', goToNextPage);
+
+            showPage(currentPage);
+
+            function setActiveDot() {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentPage - 1) {
+                        dot.classList.add('active-dot');
+                    } else {
+                        dot.classList.remove('active-dot');
+                    }
+                });
+            }
+
+            setActiveDot(); // Set the initial active dot
+        });
     </script>
 
 </body>
