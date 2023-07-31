@@ -41,7 +41,9 @@
 
             <a href="index.html" class="logo d-flex align-items-center">
                 <img src="assets/img/a.png" alt="">
-                <h1>The Annexe Communities Archives</h1>
+                <h1 class="logo-text">
+                    <span>The Annexe Communities Archives</span>
+                </h1>
             </a>
 
             <nav id="navbar" class="navbar">
@@ -91,6 +93,12 @@
 
     <main id="main">
         <section>
+            <div class="row justify-content-start">
+                <div class="col-md-3 newItem" style="width:fit-content; margin-left:30px;">
+                    <h2><a href="art.html">Back</a></h2>
+                </div>
+            </div>
+
             <div class="gallery">
                 <div class="thumbnails"></div>
                 <div class="preview">
@@ -101,8 +109,8 @@
             <!-- Pagination Container -->
             <div class="row mt-3 pagination-container">
                 <div class="pagination-dots custom-pagination">
-                <button id="prevPageBtn" class="pagination-button" style="width:100px">Previous</button>
-                <button id="nextPageBtn" class="pagination-button" style="width:100px">Next</button>
+                    <button id="prevPageBtn" class="pagination-button" style="width:100px">Previous</button>
+                    <button id="nextPageBtn" class="pagination-button" style="width:100px">Next</button>
                 </div>
             </div>
 
@@ -199,67 +207,67 @@
         displayThumbnails();
 
         document.addEventListener('DOMContentLoaded', function () {
-    const prevPageBtn = document.getElementById('prevPageBtn');
-    const nextPageBtn = document.getElementById('nextPageBtn');
+            const prevPageBtn = document.getElementById('prevPageBtn');
+            const nextPageBtn = document.getElementById('nextPageBtn');
 
-    // Pagination
-    const thumbnailsContainer = document.querySelector('.thumbnails');
-    const thumbnails = thumbnailsContainer.querySelectorAll('.thumbnail');
+            // Pagination
+            const thumbnailsContainer = document.querySelector('.thumbnails');
+            const thumbnails = thumbnailsContainer.querySelectorAll('.thumbnail');
 
-    let currentPage = 1;
-    const thumbnailsPerPage = 8; // Adjust this value to the desired number of thumbnails per page
+            let currentPage = 1;
+            const thumbnailsPerPage = 8; // Adjust this value to the desired number of thumbnails per page
 
-    function showPage(page) {
-        const startIndex = (page - 1) * thumbnailsPerPage;
-        const endIndex = startIndex + thumbnailsPerPage;
+            function showPage(page) {
+                const startIndex = (page - 1) * thumbnailsPerPage;
+                const endIndex = startIndex + thumbnailsPerPage;
 
-        thumbnails.forEach((thumbnail, index) => {
-            if (index >= startIndex && index < endIndex) {
-                thumbnail.style.display = 'block';
-            } else {
-                thumbnail.style.display = 'none';
+                thumbnails.forEach((thumbnail, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        thumbnail.style.display = 'block';
+                    } else {
+                        thumbnail.style.display = 'none';
+                    }
+                });
             }
-        });
-    }
 
-    function goToPrevPage() {
-        if (currentPage > 1) {
-            currentPage--;
-            showPage(currentPage);
-            setActiveDot();
-        }
-    }
-
-    function goToNextPage() {
-        const totalPages = Math.ceil(thumbnails.length / thumbnailsPerPage);
-        if (currentPage < totalPages) {
-            currentPage++;
-            showPage(currentPage);
-            setActiveDot();
-        }
-    }
-
-    prevPageBtn.addEventListener('click', goToPrevPage);
-    nextPageBtn.addEventListener('click', goToNextPage);
-
-    showPage(currentPage);
-
-    function setActiveDot() {
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, index) => {
-            if (index === currentPage - 1) {
-                dot.classList.add('active-dot');
-            } else {
-                dot.classList.remove('active-dot');
+            function goToPrevPage() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                    setActiveDot();
+                }
             }
-        });
-    }
 
-    setActiveDot(); // Set the initial active dot
-});
+            function goToNextPage() {
+                const totalPages = Math.ceil(thumbnails.length / thumbnailsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    showPage(currentPage);
+                    setActiveDot();
+                }
+            }
+
+            prevPageBtn.addEventListener('click', goToPrevPage);
+            nextPageBtn.addEventListener('click', goToNextPage);
+
+            showPage(currentPage);
+
+            function setActiveDot() {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentPage - 1) {
+                        dot.classList.add('active-dot');
+                    } else {
+                        dot.classList.remove('active-dot');
+                    }
+                });
+            }
+
+            setActiveDot(); // Set the initial active dot
+        });
 
     </script>
-    
+
 
 </body>
 

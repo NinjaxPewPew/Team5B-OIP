@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Social Cafe</title>
+    <title>Time Capsule</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -38,7 +38,6 @@
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
 
             <a href="index.html" class="logo d-flex align-items-center">
                 <img src="assets/img/a.png" alt="">
@@ -96,7 +95,7 @@
         <section>
             <div class="row justify-content-start">
                 <div class="col-md-3 newItem" style="width:fit-content; margin-left:30px;">
-                    <h2><a href="class.html">Back</a></h2>
+                    <h2><a href="history.html">Back</a></h2>
                 </div>
             </div>
 
@@ -106,6 +105,7 @@
                     <img id="" src="" alt="">
                 </div>
             </div>
+
         </section>
     </main><!-- End #main -->
 
@@ -161,11 +161,11 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        const imagePath = "assets/img/socialCafe/";
+        const imagePath = "assets/img/timeCapsule/";
 
         const images = [];
 
-        for (let i = 2; i <= 7; i++) {
+        for (let i = 1; i <= 6; i++) {
             const filename = `${i}.jpg`;
             images.push(filename);
         }
@@ -197,7 +197,69 @@
         }
 
         displayThumbnails();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const prevPageBtn = document.getElementById('prevPageBtn');
+            const nextPageBtn = document.getElementById('nextPageBtn');
+
+            // Pagination
+            const thumbnailsContainer = document.querySelector('.thumbnails');
+            const thumbnails = thumbnailsContainer.querySelectorAll('.thumbnail');
+
+            let currentPage = 1;
+            const thumbnailsPerPage = 8; // Adjust this value to the desired number of thumbnails per page
+
+            function showPage(page) {
+                const startIndex = (page - 1) * thumbnailsPerPage;
+                const endIndex = startIndex + thumbnailsPerPage;
+
+                thumbnails.forEach((thumbnail, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        thumbnail.style.display = 'block';
+                    } else {
+                        thumbnail.style.display = 'none';
+                    }
+                });
+            }
+
+            function goToPrevPage() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                    setActiveDot();
+                }
+            }
+
+            function goToNextPage() {
+                const totalPages = Math.ceil(thumbnails.length / thumbnailsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    showPage(currentPage);
+                    setActiveDot();
+                }
+            }
+
+            prevPageBtn.addEventListener('click', goToPrevPage);
+            nextPageBtn.addEventListener('click', goToNextPage);
+
+            showPage(currentPage);
+
+            function setActiveDot() {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentPage - 1) {
+                        dot.classList.add('active-dot');
+                    } else {
+                        dot.classList.remove('active-dot');
+                    }
+                });
+            }
+
+            setActiveDot(); // Set the initial active dot
+        });
+
     </script>
+
 
 </body>
 
