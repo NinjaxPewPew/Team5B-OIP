@@ -1834,3 +1834,22 @@ figure figcaption {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 5px #ccc;
 }
+
+@media (max-width: 768px) {
+  .logo-text {
+    position: relative;
+    /* Enable relative positioning for the parent */
+  }
+
+  .logo-text:before {
+    content: "Annexe";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .logo-text span {
+    display: none;
+  }
+}
