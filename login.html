@@ -110,6 +110,7 @@
 
             <input class="login_btn" type="submit" value="Login" />
             <div id="error-message" class="error-message"></div>
+            <div id="success-message" class="success-message"></div>
           </form>
         </div>
       </div>
@@ -193,10 +194,22 @@
       const adminPassword = "admin123";
 
       if (username === adminUsername && password === adminPassword) {
-        // Redirect to the admin dashboard
-        window.location.href = "admin_index.html";
-        document.getElementById("loginButton").hidden = hidden;
+        // Display the success message
+        const successMessage = "Login successful! Redirecting...";
+        const successMessageElement = document.getElementById("success-message");
+        successMessageElement.textContent = successMessage;
+        successMessageElement.style.color = "green";
+
+        // Redirect to the admin dashboard after a short delay (e.g., 2 seconds)
+        setTimeout(function () {
+          window.location.href = "admin_index.html";
+          document.getElementById("loginButton").hidden = hidden;
+        }, 2000); // 2 seconds delay
       } else {
+        // Clear any previous success message
+        const successMessageElement = document.getElementById("success-message");
+        successMessageElement.textContent = "";
+
         // Display the error message
         const errorMessage = "Incorrect username or password.";
         const errorMessageElement = document.getElementById("error-message");
@@ -204,12 +217,5 @@
         errorMessageElement.style.color = "red";
       }
     });
-
-    function logout() {
-      // Replace the following line with the logout logic
-      // For now, we are redirecting to the login page
-      window.location.href = "index.html";
-      alert("You have successfully logged out.");
-    }
   </script>
 </html>
