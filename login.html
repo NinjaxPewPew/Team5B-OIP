@@ -109,6 +109,7 @@
             <input type="password" id="password" name="password" required />
 
             <input class="login_btn" type="submit" value="Login" />
+            <div id="error-message" class="error-message"></div>
           </form>
         </div>
       </div>
@@ -181,27 +182,28 @@
   </body>
 
   <script>
-    document
-      .getElementById("login-form")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
+    document.getElementById("login-form").addEventListener("submit", function (event) {
+      event.preventDefault();
 
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-        // Replace the hardcoded admin credentials with your desired values
-        const adminUsername = "admin";
-        const adminPassword = "admin123";
+      // Replace the hardcoded admin credentials with your desired values
+      const adminUsername = "admin";
+      const adminPassword = "admin123";
 
-        if (username === adminUsername && password === adminPassword) {
-          // Redirect to the admin dashboard
-          window.location.href = "admin_index.html";
-          document.getElementById("loginButton").hidden = hidden;
-        } else {
-          // Redirect to the regular user dashboard
-          window.location.href = "index.html";
-        }
-      });
+      if (username === adminUsername && password === adminPassword) {
+        // Redirect to the admin dashboard
+        window.location.href = "admin_index.html";
+        document.getElementById("loginButton").hidden = hidden;
+      } else {
+        // Display the error message
+        const errorMessage = "Incorrect username or password.";
+        const errorMessageElement = document.getElementById("error-message");
+        errorMessageElement.textContent = errorMessage;
+        errorMessageElement.style.color = "red";
+      }
+    });
 
     function logout() {
       // Replace the following line with the logout logic
