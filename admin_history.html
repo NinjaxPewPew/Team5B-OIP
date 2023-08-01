@@ -1,315 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>History</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>History</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/a.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/a.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- Template Main CSS Files -->
+    <link href="assets/css/variables.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-  <!-- Template Main CSS Files -->
-  <link href="assets/css/variables.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="admin_index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/a.png" alt="" />
+          <h1>The Annexe Communities Archives</h1>
+        </a>
 
-</head>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="admin_index.html">Home</a></li>
+            <li><a href="admin_about.html">About us</a></li>
+            <li><a href="admin_history.html">History</a></li>
+            <li><a href="admin_art.html">Art</a></li>
 
-<body>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Activities</span>
+                <i class="bi bi-chevron-down dropdown-indicator"></i
+              ></a>
+              <ul>
+                <li><a href="admin_event.html">Events</a></li>
+                <li><a href="admin_class.html">Classes</a></li>
+              </ul>
+            </li>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <li><a href="admin_forum.html">Forum</a></li>
+            <li><a href="admin_contact.html">Contact us</a></li>
+            <li>
+              <a href="#" id="logoutButton" onclick="logout();">Logout</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- .navbar -->
 
-      <a href="admin_index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/a.png" alt="">
-        <h1>The Annexe Communities Archives</h1>
-      </a>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                <li><a href="admin_index.html">Home</a></li>
-                <li><a href="admin_about.html">About us</a></li>
-                <li><a href="admin_history.html">History</a></li>
-                <li><a href="admin_art.html">Art</a></li>
-
-                <li class="dropdown"><a href="#"><span>Activities</span> <i
-                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                    <li><a href="admin_event.html">Events</a></li>
-                    <li><a href="admin_class.html">Classes</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="admin_forum.html">Forum</a></li>
-                <li><a href="admin_contact.html">Contact us</a></li>
-                <li><a href="#" id="logoutButton" onclick="logout();">Logout</a></li>
-                
-                </ul>
-            </nav><!-- .navbar -->
-
-      <div class="position-relative">
-        <a href="#" class="mx-2 js-search-open"></a>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-        <a href="https://www.facebook.com/annexepartick/?locale=en_GB" target="_blank" class="mx-2"><span
-            class="bi-facebook"></span></a>
-        <a href="https://twitter.com/AnnexeComm?s=20" target="_blank" class="mx-2"><span class="bi-twitter"></span></a>
-        <a href="https://www.youtube.com/@AnnexeCommunities" target="_blank" class="mx-2"><span
-            class="bi-youtube"></span></a>
-
-        <!-- ======= Search Form ======= -->
-        <div class="search-form-wrap js-search-form-wrap">
-          <form action="search-result.html" class="search-form">
-            <span class="icon bi-search"></span>
-            <input type="text" placeholder="Search" class="form-control">
-            <button class="btn js-search-close"><span class="bi-x"></span></button>
-          </form>
-        </div><!-- End Search Form -->
-
-      </div>
-
-    </div>
-
-  </header><!-- End Header -->
-
-  <main id="main">
-    <section>
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-12 text-center mb-5">
-            <h1 class="page-title">History</h1>
+        <div class="position-relative">
+          <a href="#" class="mx-2 js-search-open"></a>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+          <!-- ======= Search Form ======= -->
+          <div class="search-form-wrap js-search-form-wrap">
+            <form action="search-result.html" class="search-form">
+              <span class="icon bi-search"></span>
+              <input type="text" placeholder="Search" class="form-control" />
+              <button class="btn js-search-close">
+                <span class="bi-x"></span>
+              </button>
+            </form>
           </div>
+          <!-- End Search Form -->
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
 
-        <div class="card-body-container text-center">
-          <div class="row justify-content-center pt-3 mt-3 bg-light">
-            <div class="col-md-8 mx-auto">
-              <div class="card artCard bg-light">
-                <h4 class="p-2">Community-Stained Glass Window</h4>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                      class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                      aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                      aria-label="Slide 3"></button>
+    <main id="main">
+      <section>
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+              <h1 class="page-title">History</h1>
+            </div>
+
+            <div class="card-body-container text-center">
+              <div class="row justify-content-center pt-3 mt-3 bg-light">
+                <div class="col-md-8 mx-auto">
+                  <div class="card artCard bg-light">
+                    <h4 class="p-2">Community-Stained Glass Window</h4>
+                    <div
+                      id="carouselExampleIndicators"
+                      class="carousel slide"
+                      data-bs-ride="carousel"
+                    >
+                      <div class="carousel-indicators">
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="0"
+                          class="active"
+                          aria-current="true"
+                          aria-label="Slide 1"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="1"
+                          aria-label="Slide 2"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="2"
+                          aria-label="Slide 3"
+                        ></button>
+                      </div>
+                      <div class="carousel-inner bg-light">
+                        <div class="carousel-item active text-center">
+                          <img
+                            src="assets/img/Art - Storyline of stained glass window- the seasons/stained glass window.jpg"
+                            class="d-block mx-auto artCardImg"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="assets/img/stainedGlassWindow/33.jpg"
+                            class="d-block mx-auto artCardImg"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="assets/img/stainedGlassWindow/165.jpg"
+                            class="d-block mx-auto artCardImg"
+                            alt="..."
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon sliderBtn"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon sliderBtn"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+
+                    <div class="card-body">
+                      <h4 class="mb-4 audio-player audio-player-box">
+                        <a href="stainedglasswindow.html"
+                          >View All Images&nbsp;</a
+                        >
+                      </h4>
+                      <h2 class="mb-4 audio-player audio-player-box">
+                        Play Audio&nbsp;<audio
+                          src="audio/stainedglasswindow.mp3"
+                        ></audio>
+                        <i
+                          class="bi bi-headphones audio-icon"
+                          aria-hidden="true"
+                        ></i>
+                      </h2>
+                      <p class="card-text">
+                        In 2008, a community-stained glass window was created by
+                        the local artists group Red Dot Art, funded by Glasgow
+                        City Council. The window aimed to inspire the people of
+                        Partick to reintroduce stained-glass panels into the
+                        area. The design, depicting the four seasons and
+                        symbolizing the Annexe's year-round support for the
+                        community, was well-received. Though not fully achieving
+                        the vision, some stained glass pieces now grace windows
+                        in Partick and Whiteinch. The artist behind the window,
+                        David Stevenson, and other contributors (Graeme, Brendan
+                        and Liz) are remembered for their legacies even after
+                        their passing.
+                      </p>
+                    </div>
                   </div>
-                  <div class="carousel-inner bg-light">
-                    <div class="carousel-item active text-center">
-                      <img src="assets/img/Art - Storyline of stained glass window- the seasons/stained glass window.jpg" class="d-block mx-auto artCardImg" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="assets/img/stainedGlassWindow/33.jpg" class="d-block mx-auto artCardImg" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="assets/img/stainedGlassWindow/165.jpg" class="d-block mx-auto artCardImg" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon sliderBtn" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon sliderBtn" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
                 </div>
+              </div>
 
-                <div class="card-body">
-                  <h4 class="mb-4 audio-player audio-player-box"><a href="stainedglasswindow.html">View All
-                      Images&nbsp;</a></h4>
-                  <h2 class="mb-4 audio-player audio-player-box">Play Audio&nbsp;<audio src="audio/stainedglasswindow.mp3"></audio>
-                    <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
-                  </h2>
-                  <p class="card-text">In 2008, a community-stained glass window was created by the local artists group Red Dot Art, funded by Glasgow City Council. 
-                  The window aimed to inspire the people of Partick to reintroduce stained-glass panels into the area. 
-                  The design, depicting the four seasons and symbolizing the Annexe's year-round support for the community, was well-received. 
-                  Though not fully achieving the vision, some stained glass pieces now grace windows in Partick and Whiteinch. 
-                  The artist behind the window, David Stevenson, and other contributors (Graeme, Brendan and Liz) are remembered for their legacies even after their passing.</p>
+              <div class="row justify-content-center pt-3 mt-3 bg-light">
+                <div class="col-md-8 mx-auto">
+                  <div class="card artCard bg-light">
+                    <h4 class="p-2">Past Projects</h4>
+                    <div
+                      id="carouselExampleIndicators2"
+                      class="carousel slide"
+                      data-bs-ride="carousel"
+                    >
+                      <div class="carousel-inner bg-light">
+                        <iframe
+                          id="pdfViewer"
+                          src="assets/Connects2Project.pdf"
+                          width="100%"
+                          height="1000px"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <!-- Pagination Container -->
+              <div class="row mt-3 pagination-container">
+                <div class="pagination-dots custom-pagination">
+                  <button
+                    id="prevPageBtn"
+                    class="pagination-button"
+                    style="width: 100px"
+                  >
+                    Previous
+                  </button>
+                  <a href="#" class="dot active-dot"></a>
+                  <a href="#" class="dot"></a>
+                  <a href="#" class="dot"></a>
+                  <button
+                    id="nextPageBtn"
+                    class="pagination-button"
+                    style="width: 100px"
+                  >
+                    Next
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="row justify-content-center pt-3 mt-3 bg-light">
-            <div class="col-md-8 mx-auto">
-              <div class="card artCard bg-light">
-                <h4 class="p-2">Past Projects</h4>
-                <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner bg-light">
-                    <iframe id="pdfViewer" src="assets/Connects2Project.pdf" width="100%" height="1000px"></iframe>
-                  </div>
-                </div>
+        </div>
+      </section>
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-legal">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <div class="copyright">
+                © Copyright <strong><span>The Annexe</span></strong
+                >. All Rights Reserved
+              </div>
+
+              <div class="credits">
+                Designed by
+                <a
+                  href="https://github.com/NinjaxPewPew/ninjaxpewpew.github.io/"
+                  >Team 5B</a
+                >
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
+                <a
+                  href="https://www.facebook.com/annexepartick/?locale=en_GB"
+                  target="_blank"
+                  class="facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a
+                  href="https://twitter.com/AnnexeComm?s=20"
+                  target="_blank"
+                  class="twitter"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/@AnnexeCommunities"
+                  target="_blank"
+                  class="youtube"
+                  ><i class="bi bi-youtube"></i
+                ></a>
               </div>
             </div>
           </div>
-
-          <!-- Pagination Container -->
-          <div class="row mt-3 pagination-container">
-            <div class="pagination-dots custom-pagination">
-              <button id="prevPageBtn" class="pagination-button" style="width:100px">Previous</button>
-              <a href="#" class="dot active-dot"></a>
-              <a href="#" class="dot"></a>
-              <a href="#" class="dot"></a>
-              <button id="nextPageBtn" class="pagination-button" style="width:100px">Next</button>
-            </div>
-          </div>
-
         </div>
       </div>
+    </footer>
 
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-    </section>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-legal">
-      <div class="container">
-
-        <div class="row justify-content-between">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <div class="copyright">
-              © Copyright <strong><span>The Annexe</span></strong>. All Rights Reserved
-            </div>
-
-            <div class="credits">
-              Designed by <a href="https://github.com/NinjaxPewPew/ninjaxpewpew.github.io/">Team 5B</a>
-            </div>
-
-          </div>
-
-          <div class="col-md-6">
-            <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
-              <a href="https://www.facebook.com/annexepartick/?locale=en_GB" target="_blank" class="facebook"><i
-                  class="bi bi-facebook"></i></a>
-              <a href="https://twitter.com/AnnexeComm?s=20" target="_blank" class="twitter"><i
-                  class="bi bi-twitter"></i></a>
-              <a href="https://www.youtube.com/@AnnexeCommunities" target="_blank" class="youtube"><i
-                  class="bi bi-youtube"></i></a>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-  </footer>
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
+        // Pagination
+        const cardBodyContainer = document.querySelector(
+          ".card-body-container",
+        );
+        const cardBodies = cardBodyContainer.querySelectorAll(".row.bg-light");
 
-      // Pagination
-      const cardBodyContainer = document.querySelector('.card-body-container');
-      const cardBodies = cardBodyContainer.querySelectorAll('.row.bg-light');
+        const prevPageBtn = document.getElementById("prevPageBtn");
+        const nextPageBtn = document.getElementById("nextPageBtn");
 
-      const prevPageBtn = document.getElementById('prevPageBtn');
-      const nextPageBtn = document.getElementById('nextPageBtn');
+        let currentPage = 1;
+        const cardsPerPage = 2;
 
-      let currentPage = 1;
-      const cardsPerPage = 2;
+        function showPage(page) {
+          const startIndex = (page - 1) * cardsPerPage;
+          const endIndex = startIndex + cardsPerPage;
 
-      function showPage(page) {
-        const startIndex = (page - 1) * cardsPerPage;
-        const endIndex = startIndex + cardsPerPage;
-
-        cardBodies.forEach((cardBody, index) => {
-          if (index >= startIndex && index < endIndex) {
-            cardBody.style.display = 'block';
-          } else {
-            cardBody.style.display = 'none';
-          }
-        });
-      }
-
-      function goToPrevPage() {
-        if (currentPage > 1) {
-          currentPage--;
-          showPage(currentPage);
-          setActiveDot();
+          cardBodies.forEach((cardBody, index) => {
+            if (index >= startIndex && index < endIndex) {
+              cardBody.style.display = "block";
+            } else {
+              cardBody.style.display = "none";
+            }
+          });
         }
-      }
 
-      function goToNextPage() {
-        const totalPages = Math.ceil(cardBodies.length / cardsPerPage);
-        if (currentPage < totalPages) {
-          currentPage++;
-          showPage(currentPage);
-          setActiveDot();
-        }
-      }
-
-      prevPageBtn.addEventListener('click', goToPrevPage);
-      nextPageBtn.addEventListener('click', goToNextPage);
-
-      showPage(currentPage);
-
-      function setActiveDot() {
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, index) => {
-          if (index === currentPage - 1) {
-            dot.classList.add('active-dot');
-          } else {
-            dot.classList.remove('active-dot');
+        function goToPrevPage() {
+          if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+            setActiveDot();
           }
-        });
-      }
-      
-      function logout() {
-      window.location.href = 'index.html';
-      alert('You have successfully logged out.');
-    }
+        }
 
-      setActiveDot(); // Set the initial active dot
+        function goToNextPage() {
+          const totalPages = Math.ceil(cardBodies.length / cardsPerPage);
+          if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+            setActiveDot();
+          }
+        }
 
-    });
+        prevPageBtn.addEventListener("click", goToPrevPage);
+        nextPageBtn.addEventListener("click", goToNextPage);
 
-  </script>
+        showPage(currentPage);
 
-</body>
+        function setActiveDot() {
+          const dots = document.querySelectorAll(".dot");
+          dots.forEach((dot, index) => {
+            if (index === currentPage - 1) {
+              dot.classList.add("active-dot");
+            } else {
+              dot.classList.remove("active-dot");
+            }
+          });
+        }
 
+        function logout() {
+          window.location.href = "index.html";
+          alert("You have successfully logged out.");
+        }
+
+        setActiveDot(); // Set the initial active dot
+      });
+    </script>
+  </body>
 </html>

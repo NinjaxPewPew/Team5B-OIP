@@ -1,553 +1,649 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>About Us</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>About Us</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/a.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/a.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- Template Main CSS Files -->
+    <link href="assets/css/variables.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-  <!-- Template Main CSS Files -->
-  <link href="assets/css/variables.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="admin_index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/a.png" alt="" />
+          <h1>The Annexe Communities Archives</h1>
+        </a>
 
-</head>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="admin_index.html">Home</a></li>
+            <li><a href="admin_about.html">About us</a></li>
+            <li><a href="admin_history.html">History</a></li>
+            <li><a href="admin_art.html">Art</a></li>
 
-<body>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Activities</span>
+                <i class="bi bi-chevron-down dropdown-indicator"></i
+              ></a>
+              <ul>
+                <li><a href="admin_event.html">Events</a></li>
+                <li><a href="admin_class.html">Classes</a></li>
+              </ul>
+            </li>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <li><a href="admin_forum.html">Forum</a></li>
+            <li><a href="admin_contact.html">Contact us</a></li>
+            <li>
+              <a href="#" id="logoutButton" onclick="logout();">Logout</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- .navbar -->
 
-      <a href="admin_index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/a.png" alt="">
-        <h1>The Annexe Communities Archives</h1>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="admin_index.html">Home</a></li>
-          <li><a href="admin_about.html">About us</a></li>
-          <li><a href="admin_history.html">History</a></li>
-          <li><a href="admin_art.html">Art</a></li>
-
-          <li class="dropdown"><a href="#"><span>Activities</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="admin_event.html">Events</a></li>
-              <li><a href="admin_class.html">Classes</a></li>
-            </ul>
-          </li>
-          
-          <li><a href="admin_forum.html">Forum</a></li>
-          <li><a href="admin_contact.html">Contact us</a></li>
-          <li><a href="#" id="logoutButton" onclick="logout();">Logout</a></li>
-          
-        </ul>
-      </nav><!-- .navbar -->
-
-      <div class="position-relative">
-        <a href="#" class="mx-2 js-search-open"></a>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-        <a href="https://www.facebook.com/annexepartick/?locale=en_GB" target="_blank" class="mx-2"><span
-            class="bi-facebook"></span></a>
-        <a href="https://twitter.com/AnnexeComm?s=20" target="_blank" class="mx-2"><span class="bi-twitter"></span></a>
-        <a href="https://www.youtube.com/@AnnexeCommunities" target="_blank" class="mx-2"><span
-            class="bi-youtube"></span></a>
-
-        <!-- ======= Search Form ======= -->
-        <div class="search-form-wrap js-search-form-wrap">
-          <form action="search-result.html" class="search-form">
-            <span class="icon bi-search"></span>
-            <input type="text" placeholder="Search" class="form-control">
-            <button class="btn js-search-close"><span class="bi-x"></span></button>
-          </form>
-        </div><!-- End Search Form -->
-
-      </div>
-
-    </div>
-
-  </header><!-- End Header -->
-
-  <main id="main">
-    <section>
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-12 text-center mb-5">
-            <h1 class="page-title">About us</h1>
+        <div class="position-relative">
+          <a href="#" class="mx-2 js-search-open"></a>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+          <!-- ======= Search Form ======= -->
+          <div class="search-form-wrap js-search-form-wrap">
+            <form action="search-result.html" class="search-form">
+              <span class="icon bi-search"></span>
+              <input type="text" placeholder="Search" class="form-control" />
+              <button class="btn js-search-close">
+                <span class="bi-x"></span>
+              </button>
+            </form>
           </div>
+          <!-- End Search Form -->
         </div>
+      </div>
+    </header>
+    <!-- End Header -->
 
-        <div class="row mb-2">
-          <div class="d-md-flex post-entry-2 half">
-            <a href="#" class="me-4 thumbnail thumbnail1">
-              <img src="assets/img/annexe-front-2021-(1)-lg.jpg" alt="" class="img-fluid">
-            </a>
-            <div class="ps-md-5 mt-4 mt-md-0">
-              <!-- <div class="post-meta mt-4">About us</div> -->
-              <h2 class="mb-4 display-4 text-center">Our Backgrounds&nbsp;</h2>
-              <h2 class="mb-4 audio-player audio-player-box">Play Audio&nbsp;<audio src="audio/background.mp3"></audio>
-                <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
-              </h2>
-
-              <p>Annexe Communities (known locally as The Annexe) is a community-led health and wellbeing charity. We
-                support
-                people to
-                improve their own health and wellbeing, particularly older people and those living with long term health
-                conditions. We
-                also help local groups to build their capacity, and local people who want to volunteer.
-
-                Annexe Communities began life as Partick Community Association in 1986. Residents petitioned Glasgow
-                City
-                Council and
-                secured the lease of The Annexe building in Stewartville Street in 1998. Lottery funding enabled the
-                community
-                association to establish a thriving and enterprising Healthy Living Centre. The healthy eating café
-                became
-                the
-                hub – as
-                it is today, serving the local community healthy and affordable meals. Glasgow City Council’s funding
-                also
-                enabled
-                residents’ access to health and wellbeing activities.</p>
-
-              <div class="collapse" id="pastProject">
-
-                <h2 class="mb-4 display-4 text-center">Past Project&nbsp;</h2>
-                <h2 class="mb-4 audio-player audio-player-box">Play Audio&nbsp;<audio
-                    src="audio/pastproject.mp3"></audio>
-                  <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
-                </h2>
-                <p>Healthy Living Initiatives ran from 2006 to 2020, funded by Glasgow City Council integrated grants.
-                  Annexe
-                  staff worked
-                  across Townhead, Anderston, Yorkhill, Whiteinch and Partick developing and delivering health and
-                  wellbeing
-                  activities
-                  including physical activities, stress management and healthy cooking workshops.
-
-                  From 2011 to 2019, the Connects Project operated with Lottery funding - working with older people in
-                  the
-                  community to
-                  develop and deliver an exciting programme of activities to reduce loneliness and tackle isolation.
-                  Many
-                  activities were
-                  supported by volunteers who, through their involvement in the project, gained confidence to help
-                  others
-                  and
-                  give
-                  something back to their community. Partick Pluckers ukulele group is one example. Another is the Knit
-                  n
-                  Natter group.
-                  The global travels of their knitted penguins are a whole other story! Many groups continue their
-                  activities
-                  today as
-                  volunteer-led groups as a legacy of the Connects Project.
-
-                  AXIS Health Hubs ran from 2012 to 2020, a community health initiative delivered in partnership with
-                  another
-                  healthy
-                  living centre and funded by an NHS Greater Glasgow and Clyde contract. The Annexe worked in Drumchapel
-                  and
-                  Easterhouse,
-                  involving people in healthy cooking workshops and activities such as Health Issues in the Community
-                  courses.
-                  A key part
-                  was building the capacity of local volunteers to enable them to develop and run their own community
-                  group.
-
-                  Aim for Less (2017-2020) was a Climate Challenge Funded project addressing food waste. It worked with
-                  residents to raise
-                  awareness and promote positive behaviour change through group work and food waste initiatives. The
-                  project
-                  utilised
-                  surplus supermarket food to create healthy three-course lunch club meals for older people. These lunch
-                  clubs
-                  continue
-                  today and are more popular than ever.</p>
-              </div>
-
-              <p><a href="#" class="more" data-bs-toggle="collapse" data-bs-target="#pastProject" aria-expanded="false"
-                  aria-controls="pastProject">Read More</a></p>
+    <main id="main">
+      <section>
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+              <h1 class="page-title">About us</h1>
             </div>
           </div>
 
-          <div class="d-md-flex post-entry-2 half mt-5">
-            <a href="#" class="me-4 thumbnail order-2 ">
-              <img src="assets/img/mission.png" alt="" class="img-fluid thumbnailImgMargin">
-            </a>
-            <div class="pe-md-5 mt-4 mt-md-0">
-              <!-- <div class="post-meta mt-4">Mission &amp; Vision</div> -->
-
-              <h2 class="mb-4 display-4 text-center">Mission &amp; Vision&nbsp;</h2>
-              <h2 class="mb-4 audio-player audio-player-box">Play Audio&nbsp;<audio
-                  src="audio/missionvision.mp3"></audio>
-                <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
-              </h2>
-
-              <p><strong>Vision : </strong>A Glasgow where people are empowered and inspired to be healthy and flourish.
-              </p>
-              <p><strong>Mission : </strong>Connecting and enabling people to develop their potential.</p>
-
-              <div class="collapse" id="impactFacts">
-
-                <h2 class="mb-4 display-4 text-center">Values&nbsp;</h2>
-                <h2 class="mb-4 audio-player audio-player-box">Play Audio&nbsp;<audio src="audio/values.mp3"></audio>
+          <div class="row mb-2">
+            <div class="d-md-flex post-entry-2 half">
+              <a href="#" class="me-4 thumbnail thumbnail1">
+                <img
+                  src="assets/img/annexe-front-2021-(1)-lg.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </a>
+              <div class="ps-md-5 mt-4 mt-md-0">
+                <!-- <div class="post-meta mt-4">About us</div> -->
+                <h2 class="mb-4 display-4 text-center">
+                  Our Backgrounds&nbsp;
+                </h2>
+                <h2 class="mb-4 audio-player audio-player-box">
+                  Play Audio&nbsp;<audio src="audio/background.mp3"></audio>
                   <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
                 </h2>
 
-                <ul>
-                  <li>Participation and empowerment – enabling people to have a greater say in the decisions and
-                    activities/services
-                    that affect their lives</li>
-                  <li>Celebrating and promoting diversity – underpinned by equality of opportunity and actively
-                    addressing
-                    inequalities</li>
-                  <li>Promoting respect, integrity and confidentiality in all aspects of working</li>
-                  <li>Striving for the best quality and value for money in the delivery of services and activities</li>
-                  <li>Embracing change and adapting to meet the needs of communities</li>
-                  <li>Committed to reducing our environmental impact and continually improving our environmental
-                    performance
-                    as an
-                    integral and fundamental part of our business strategy and operating systems</li>
+                <p>
+                  Annexe Communities (known locally as The Annexe) is a
+                  community-led health and wellbeing charity. We support people
+                  to improve their own health and wellbeing, particularly older
+                  people and those living with long term health conditions. We
+                  also help local groups to build their capacity, and local
+                  people who want to volunteer. Annexe Communities began life as
+                  Partick Community Association in 1986. Residents petitioned
+                  Glasgow City Council and secured the lease of The Annexe
+                  building in Stewartville Street in 1998. Lottery funding
+                  enabled the community association to establish a thriving and
+                  enterprising Healthy Living Centre. The healthy eating café
+                  became the hub – as it is today, serving the local community
+                  healthy and affordable meals. Glasgow City Council’s funding
+                  also enabled residents’ access to health and wellbeing
+                  activities.
+                </p>
+
+                <div class="collapse" id="pastProject">
+                  <h2 class="mb-4 display-4 text-center">Past Project&nbsp;</h2>
+                  <h2 class="mb-4 audio-player audio-player-box">
+                    Play Audio&nbsp;<audio src="audio/pastproject.mp3"></audio>
+                    <i
+                      class="bi bi-headphones audio-icon"
+                      aria-hidden="true"
+                    ></i>
+                  </h2>
+                  <p>
+                    Healthy Living Initiatives ran from 2006 to 2020, funded by
+                    Glasgow City Council integrated grants. Annexe staff worked
+                    across Townhead, Anderston, Yorkhill, Whiteinch and Partick
+                    developing and delivering health and wellbeing activities
+                    including physical activities, stress management and healthy
+                    cooking workshops. From 2011 to 2019, the Connects Project
+                    operated with Lottery funding - working with older people in
+                    the community to develop and deliver an exciting programme
+                    of activities to reduce loneliness and tackle isolation.
+                    Many activities were supported by volunteers who, through
+                    their involvement in the project, gained confidence to help
+                    others and give something back to their community. Partick
+                    Pluckers ukulele group is one example. Another is the Knit n
+                    Natter group. The global travels of their knitted penguins
+                    are a whole other story! Many groups continue their
+                    activities today as volunteer-led groups as a legacy of the
+                    Connects Project. AXIS Health Hubs ran from 2012 to 2020, a
+                    community health initiative delivered in partnership with
+                    another healthy living centre and funded by an NHS Greater
+                    Glasgow and Clyde contract. The Annexe worked in Drumchapel
+                    and Easterhouse, involving people in healthy cooking
+                    workshops and activities such as Health Issues in the
+                    Community courses. A key part was building the capacity of
+                    local volunteers to enable them to develop and run their own
+                    community group. Aim for Less (2017-2020) was a Climate
+                    Challenge Funded project addressing food waste. It worked
+                    with residents to raise awareness and promote positive
+                    behaviour change through group work and food waste
+                    initiatives. The project utilised surplus supermarket food
+                    to create healthy three-course lunch club meals for older
+                    people. These lunch clubs continue today and are more
+                    popular than ever.
+                  </p>
+                </div>
+
+                <p>
+                  <a
+                    href="#"
+                    class="more"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pastProject"
+                    aria-expanded="false"
+                    aria-controls="pastProject"
+                    >Read More</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="d-md-flex post-entry-2 half mt-5">
+              <a href="#" class="me-4 thumbnail order-2">
+                <img
+                  src="assets/img/mission.png"
+                  alt=""
+                  class="img-fluid thumbnailImgMargin"
+                />
+              </a>
+              <div class="pe-md-5 mt-4 mt-md-0">
+                <!-- <div class="post-meta mt-4">Mission &amp; Vision</div> -->
+
+                <h2 class="mb-4 display-4 text-center">
+                  Mission &amp; Vision&nbsp;
+                </h2>
+                <h2 class="mb-4 audio-player audio-player-box">
+                  Play Audio&nbsp;<audio src="audio/missionvision.mp3"></audio>
+                  <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
+                </h2>
+
+                <p>
+                  <strong>Vision : </strong>A Glasgow where people are empowered
+                  and inspired to be healthy and flourish.
+                </p>
+                <p>
+                  <strong>Mission : </strong>Connecting and enabling people to
+                  develop their potential.
+                </p>
+
+                <div class="collapse" id="impactFacts">
+                  <h2 class="mb-4 display-4 text-center">Values&nbsp;</h2>
+                  <h2 class="mb-4 audio-player audio-player-box">
+                    Play Audio&nbsp;<audio src="audio/values.mp3"></audio>
+                    <i
+                      class="bi bi-headphones audio-icon"
+                      aria-hidden="true"
+                    ></i>
+                  </h2>
+
+                  <ul>
+                    <li>
+                      Participation and empowerment – enabling people to have a
+                      greater say in the decisions and activities/services that
+                      affect their lives
+                    </li>
+                    <li>
+                      Celebrating and promoting diversity – underpinned by
+                      equality of opportunity and actively addressing
+                      inequalities
+                    </li>
+                    <li>
+                      Promoting respect, integrity and confidentiality in all
+                      aspects of working
+                    </li>
+                    <li>
+                      Striving for the best quality and value for money in the
+                      delivery of services and activities
+                    </li>
+                    <li>
+                      Embracing change and adapting to meet the needs of
+                      communities
+                    </li>
+                    <li>
+                      Committed to reducing our environmental impact and
+                      continually improving our environmental performance as an
+                      integral and fundamental part of our business strategy and
+                      operating systems
+                    </li>
+                  </ul>
+
+                  <p>
+                    Annexe Communities recognises the importance of working with
+                    partners, with similar values to address issues affecting
+                    communities.
+                  </p>
+                  <h2 class="mb-4 display-4 text-center">
+                    Business Objectives&nbsp;
+                  </h2>
+                  <h2 class="mb-4 audio-player audio-player-box">
+                    Play Audio&nbsp;<audio
+                      src="audio/businessobjective.mp3"
+                    ></audio>
+                    <i
+                      class="bi bi-headphones audio-icon"
+                      aria-hidden="true"
+                    ></i>
+                  </h2>
+
+                  <ul>
+                    <li>
+                      Cement our position as a leading provider of frontline
+                      community-led health services in partnership with other
+                      agencies and lead the field in service innovation
+                    </li>
+                    <li>
+                      Establish a broader mix of income sources – increasing
+                      self-generated revenue, winning public sector contracts,
+                      and reducing reliance on public sector grants
+                    </li>
+                    <li>
+                      Develop a robust costing and pricing structure based on a
+                      full cost recovery model to generate greater profit for
+                      social benefit
+                    </li>
+                    <li>
+                      Maintain maximum business flexibility - learning and
+                      changing rapidly in response to the needs of communities
+                      and the volatile third sector operating environment
+                    </li>
+                    <li>
+                      Build, support, and maintain a core group of staff with
+                      the skills, knowledge, and enthusiasm to achieve our wider
+                      objectives; and retain a competent and effective board of
+                      directors
+                    </li>
+                  </ul>
+                </div>
+
+                <p>
+                  <a
+                    href=" #"
+                    class="more"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#impactFacts"
+                    aria-expanded="false"
+                    aria-controls="impactFacts"
+                    >Read More</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5 bg-light py-5">
+        <div class="container" data-aos="fade-up">
+          <h2 class="mb-4 display-4 text-center">Our Team&nbsp;</h2>
+          <h2 class="mb-4 audio-player audio-player-box">
+            Play Audio&nbsp;<audio src="audio/team.mp3"></audio>
+            <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
+          </h2>
+
+          <div class="post-meta mt-4">Board members</div>
+
+          <div class="row align-items-center">
+            <div class="col-md-1">
+              <div class="card card1" style="width: 10rem">
+                <img
+                  src="assets/img/person-1.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Peter Taylor</h5>
+                  <p class="card-text">Convener</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-1 mb-4">
+              <div class="card card2" style="width: 10rem">
+                <img
+                  src="assets/img/person-2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cathie Connelly</h5>
+                  <p class="card-text">Treasurer</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-1 mb-4">
+              <div class="card card3" style="width: 10rem">
+                <img
+                  src="assets/img/person-3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Catriona Murray</h5>
+                  <p class="card-text">Director</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-1 mb-4">
+              <div class="card card4" style="width: 10rem">
+                <img
+                  src="assets/img/person-4.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sandra White</h5>
+                  <p class="card-text">Director</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-1 mb-4">
+              <div class="card card5" style="width: 10rem">
+                <img
+                  src="assets/img/person-5.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Jennifer Jones</h5>
+                  <p class="card-text">Director</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-1 mb-4">
+              <div class="card card6" style="width: 10rem">
+                <img
+                  src="assets/img/person-6.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sandra Jackson</h5>
+                  <p class="card-text">Director</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-1 mb-4">
+              <div class="card card7" style="width: 10rem">
+                <img
+                  src="assets/img/person-7.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Colin Ross</h5>
+                  <p class="card-text">Director</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-meta mt-4">Staff</div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card staffcard1" style="width: 24rem">
+                <div class="card-header">Core staff</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <h5>Julie Fox</h5>
+                    <p class="card-text">General Manager & Company Secretary</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Kashif Anwar</h5>
+                    <p class="card-text">PT Finance Officer</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Margaret Halliday</h5>
+                    <p class="card-text">PT Centre Assistant</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Raymond Kelly</h5>
+                    <p class="card-text">PT Centre Assistant</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Tony Osborne</h5>
+                    <p class="card-text">Café Cook</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5><br /></h5>
+                    <p class="card-text"><br /></p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5><br /></h5>
+                    <p class="card-text"><br /></p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5><br /></h5>
+                    <p class="card-text"><br /></p>
+                  </li>
                 </ul>
-
-                <p>Annexe Communities recognises the importance of working with partners, with similar values to address
-                  issues affecting communities.</p>
-                <h2 class="mb-4 display-4 text-center">Business Objectives&nbsp;</h2>
-                <h2 class="mb-4 audio-player audio-player-box">Play Audio&nbsp;<audio
-                    src="audio/businessobjective.mp3"></audio>
-                  <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
-                </h2>
-
-                <ul>
-                  <li>Cement our position as a leading provider of frontline community-led health services in
-                    partnership
-                    with
-                    other agencies and lead the field in service innovation</li>
-                  <li>Establish a broader mix of income sources – increasing self-generated revenue, winning public
-                    sector
-                    contracts,
-                    and reducing reliance on public sector grants</li>
-                  <li>Develop a robust costing and pricing structure based on a full cost recovery model to generate
-                    greater
-                    profit for
-                    social benefit</li>
-                  <li>Maintain maximum business flexibility - learning and changing rapidly in response to the needs of
-                    communities and
-                    the volatile third sector operating environment</li>
-                  <li>Build, support, and maintain a core group of staff with the skills, knowledge, and enthusiasm to
-                    achieve
-                    our
-                    wider objectives; and retain a competent and effective board of directors</li>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card staffcard2" style="width: 24rem">
+                <div class="card-header">Project staff</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <h5>Michele Keenan</h5>
+                    <p class="card-text">Volunteer Development Worker</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Jane Cowie</h5>
+                    <p class="card-text">Project Coordinator</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Angela Wylie</h5>
+                    <p class="card-text">
+                      PT Community Capacity Building Worker
+                    </p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Kashif Anwar</h5>
+                    <p class="card-text">PT PB Marketing & Engagement Worker</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Sandra MacDowell</h5>
+                    <p class="card-text">
+                      Social Prescribing Development Worker
+                    </p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5><br /></h5>
+                    <p class="card-text"><br /></p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5><br /></h5>
+                    <p class="card-text"><br /></p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5><br /></h5>
+                    <p class="card-text"><br /></p>
+                  </li>
                 </ul>
-
-              </div>
-
-
-
-              <p><a href=" #" class="more" data-bs-toggle="collapse" data-bs-target="#impactFacts" aria-expanded="false"
-                  aria-controls="impactFacts">Read More</a></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="mb-5 bg-light py-5">
-      <div class="container" data-aos="fade-up">
-
-        <h2 class="mb-4 display-4 text-center">Our Team&nbsp;</h2>
-        <h2 class="mb-4 audio-player audio-player-box">Play Audio&nbsp;<audio src="audio/team.mp3"></audio>
-          <i class="bi bi-headphones audio-icon" aria-hidden="true"></i>
-        </h2>
-
-        <div class="post-meta mt-4">Board members</div>
-
-        <div class="row align-items-center">
-          <div class="col-md-1">
-            <div class="card card1" style="width: 10rem;">
-              <img src="assets/img/person-1.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Peter Taylor</h5>
-                <p class="card-text">Convener</p>
               </div>
             </div>
-          </div>
-
-
-          <div class="col-md-1 mb-4">
-            <div class="card card2" style="width: 10rem;">
-              <img src="assets/img/person-2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Cathie Connelly</h5>
-                <p class="card-text">Treasurer</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-1 mb-4">
-            <div class="card card3" style="width: 10rem;">
-              <img src="assets/img/person-3.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Catriona Murray</h5>
-                <p class="card-text">Director</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-1 mb-4">
-            <div class="card card4" style="width: 10rem;">
-              <img src="assets/img/person-4.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Sandra White</h5>
-                <p class="card-text">Director</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-1 mb-4">
-            <div class="card card5" style="width: 10rem;">
-              <img src="assets/img/person-5.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Jennifer Jones</h5>
-                <p class="card-text">Director</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-1 mb-4">
-            <div class="card card6" style="width: 10rem;">
-              <img src="assets/img/person-6.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Sandra Jackson</h5>
-                <p class="card-text">Director</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-1 mb-4">
-            <div class="card card7" style="width: 10rem;">
-              <img src="assets/img/person-7.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Colin Ross</h5>
-                <p class="card-text">Director</p>
+            <div class="col-md-3">
+              <div class="card staffcard3" style="width: 24rem">
+                <div class="card-header">Class/Group tutors</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <h5>Joe Mooney</h5>
+                    <p class="card-text">Walk Leader</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Harry Campbell</h5>
+                    <p class="card-text">Singing Tutor</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Linda Brown</h5>
+                    <p class="card-text">Yoga Tutor</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Dawn Campbell</h5>
+                    <p class="card-text">Jazzercise Tutor</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Willie Brown</h5>
+                    <p class="card-text">Line Dancing Tutor</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Gwenan Davies</h5>
+                    <p class="card-text">Art Tutor</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Ines Cavaco</h5>
+                    <p class="card-text">Art Tutor</p>
+                  </li>
+                  <li class="list-group-item">
+                    <h5>Nicola Becci</h5>
+                    <p class="card-text">Cookery Tutor</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+    <!-- End #main -->
 
-        <div class="post-meta mt-4">Staff</div>
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-legal">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <div class="copyright">
+                © Copyright <strong><span>The Annexe</span></strong
+                >. All Rights Reserved
+              </div>
 
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card staffcard1" style="width: 24rem;">
-              <div class="card-header">
-                Core staff
+              <div class="credits">
+                Designed by
+                <a
+                  href="https://github.com/NinjaxPewPew/ninjaxpewpew.github.io/"
+                  >Team 5B</a
+                >
               </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <h5>Julie Fox</h5>
-                  <p class="card-text">General Manager & Company Secretary</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Kashif Anwar</h5>
-                  <p class="card-text">PT Finance Officer</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Margaret Halliday</h5>
-                  <p class="card-text">PT Centre Assistant</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Raymond Kelly</h5>
-                  <p class="card-text">PT Centre Assistant</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Tony Osborne</h5>
-                  <p class="card-text">Café Cook</p>
-                </li>
-                <li class="list-group-item">
-                  <h5><br></h5>
-                  <p class="card-text"><br></p>
-                </li>
-                <li class="list-group-item">
-                  <h5><br></h5>
-                  <p class="card-text"><br></p>
-                </li>
-                <li class="list-group-item">
-                  <h5><br></h5>
-                  <p class="card-text"><br></p>
-                </li>
-              </ul>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card staffcard2" style="width: 24rem;">
-              <div class="card-header">
-                Project staff
+
+            <div class="col-md-6">
+              <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
+                <a
+                  href="https://www.facebook.com/annexepartick/?locale=en_GB"
+                  target="_blank"
+                  class="facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a
+                  href="https://twitter.com/AnnexeComm?s=20"
+                  target="_blank"
+                  class="twitter"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/@AnnexeCommunities"
+                  target="_blank"
+                  class="youtube"
+                  ><i class="bi bi-youtube"></i
+                ></a>
               </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <h5>Michele Keenan</h5>
-                  <p class="card-text">Volunteer Development Worker</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Jane Cowie</h5>
-                  <p class="card-text">Project Coordinator</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Angela Wylie</h5>
-                  <p class="card-text">PT Community Capacity Building Worker</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Kashif Anwar</h5>
-                  <p class="card-text">PT PB Marketing & Engagement Worker</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Sandra MacDowell</h5>
-                  <p class="card-text">Social Prescribing Development Worker</p>
-                </li>
-                <li class="list-group-item">
-                  <h5><br></h5>
-                  <p class="card-text"><br></p>
-                </li>
-                <li class="list-group-item">
-                  <h5><br></h5>
-                  <p class="card-text"><br></p>
-                </li>
-                <li class="list-group-item">
-                  <h5><br></h5>
-                  <p class="card-text"><br></p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card staffcard3" style="width: 24rem;">
-              <div class="card-header">
-                Class/Group tutors
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <h5>Joe Mooney</h5>
-                  <p class="card-text">Walk Leader</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Harry Campbell</h5>
-                  <p class="card-text">Singing Tutor</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Linda Brown</h5>
-                  <p class="card-text">Yoga Tutor</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Dawn Campbell</h5>
-                  <p class="card-text">Jazzercise Tutor</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Willie Brown</h5>
-                  <p class="card-text">Line Dancing Tutor</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Gwenan Davies</h5>
-                  <p class="card-text">Art Tutor</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Ines Cavaco</h5>
-                  <p class="card-text">Art Tutor</p>
-                </li>
-                <li class="list-group-item">
-                  <h5>Nicola Becci</h5>
-                  <p class="card-text">Cookery Tutor</p>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
+    </footer>
 
-    </section>
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  </main><!-- End #main -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-legal">
-      <div class="container">
-
-        <div class="row justify-content-between">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <div class="copyright">
-              © Copyright <strong><span>The Annexe</span></strong>. All Rights Reserved
-            </div>
-
-            <div class="credits">
-              Designed by <a href="https://github.com/NinjaxPewPew/ninjaxpewpew.github.io/">Team 5B</a>
-            </div>
-
-          </div>
-
-          <div class="col-md-6">
-            <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
-              <a href="https://www.facebook.com/annexepartick/?locale=en_GB" target="_blank" class="facebook"><i
-                  class="bi bi-facebook"></i></a>
-              <a href="https://twitter.com/AnnexeComm?s=20" target="_blank" class="twitter"><i
-                  class="bi bi-twitter"></i></a>
-              <a href="https://www.youtube.com/@AnnexeCommunities" target="_blank" class="youtube"><i
-                  class="bi bi-youtube"></i></a>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-  </footer>
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script>
-    function logout() {
-      window.location.href = 'index.html';
-      alert('You have successfully logged out.');
-    }
-  </script>
-</body>
-
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function logout() {
+        window.location.href = "index.html";
+        alert("You have successfully logged out.");
+      }
+    </script>
+  </body>
 </html>
