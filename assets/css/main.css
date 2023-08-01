@@ -1906,3 +1906,8 @@ figure figcaption {
     display: none;
   }
 }
+
+/* Custom CSS for the social media icons */
+.social-icon {
+  font-size: 30px; /* Adjust the size as per your preference */
+}
