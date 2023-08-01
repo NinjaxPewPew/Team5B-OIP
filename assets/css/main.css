@@ -1528,17 +1528,53 @@ figure figcaption {
   overflow: hidden;
 }
 
-.thumbnail1 {
+/* Default styles for .thumbnail1 and .thumbnailImgMargin */
+.thumbnail1,
+.thumbnailImgMargin {
   padding-top: 70px;
   width: 100%;
-  height: 450px !important;
 }
 
+/* Mobile view styles (adjust the max-width as needed) */
+@media (max-width: 767px) {
+  .thumbnail1,
+  .thumbnailImgMargin {
+    height: auto; /* Remove the fixed height for mobile view */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
 
-.thumbnailImgMargin {
-  margin-left: 70px;
+  .thumbnail1 img,
+  .thumbnailImgMargin img {
+    width: 100%; /* Make the image fill the entire width of the container */
+    max-height: 300px; /* Set a maximum height for the image */
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+    margin-bottom: 20px; /* Add margin between the image and the content below */
+  }
+
+  .thumbnailImgMargin {
+    margin-left: 0; /* Remove the left margin for mobile view */
+    flex-direction: column; /* Stack the image on top of the content */
+  }
+}
+
+/* Adjustments for .thumbnail elements inside .post-entry-2 */
+.post-entry-2 .thumbnail,
+.post-entry-2.half .thumbnail {
+  width: 100%; /* Make the thumbnail fill the entire width of the container */
+  margin: 10px 0; /* Remove the left and right margins and add top and bottom margins */
+  cursor: pointer;
+}
+
+.post-entry-2 .thumbnail img,
+.post-entry-2.half .thumbnail img {
   width: 100%;
+  height: 100%;
+  padding: 10px;
+  object-fit: cover; /* Preserve aspect ratio and crop if needed */
 }
+
 
 /* about us phone view */
 @media (min-width: 768px) {
@@ -1891,15 +1927,15 @@ figure figcaption {
 @media (max-width: 768px) {
   .logo-text {
     position: relative;
-    /* Enable relative positioning for the parent */
   }
 
   .logo-text:before {
-    content: "Annexe";
+    content: "Annexe Archives";
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    font-size: 20px; /* Adjust the font size as needed for responsiveness */
   }
 
   .logo-text span {
