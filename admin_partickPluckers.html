@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Knit and Natter</title>
+    <title>Partick Pluckers</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -39,31 +39,30 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="admin_index.html" class="logo d-flex align-items-center">
                 <img src="assets/img/a.png" alt="">
-                <h1 class="logo-text">
-                    <span>The Annexe Communities Archives</span>
-                </h1>
+                <h1>The Annexe Communities Archives</h1>
             </a>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="art.html">Art</a></li>
+                <li><a href="admin_index.html">Home</a></li>
+                <li><a href="admin_about.html">About us</a></li>
+                <li><a href="admin_history.html">History</a></li>
+                <li><a href="admin_art.html">Art</a></li>
 
-                    <li class="dropdown"><a href="#"><span>Activities</span> <i
-                                class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="event.html">Events</a></li>
-                            <li><a href="class.html">Classes</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="forum.html">Forum</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="login.html">Login</a></li>
+                <li class="dropdown"><a href="#"><span>Activities</span> <i
+                        class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                    <li><a href="admin_event.html">Events</a></li>
+                    <li><a href="admin_class.html">Classes</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="admin_forum.html">Forum</a></li>
+                <li><a href="admin_contact.html">Contact us</a></li>
+                <li><a href="#" id="logoutButton" onclick="logout();">Logout</a></li>
+                
                 </ul>
             </nav><!-- .navbar -->
 
@@ -94,13 +93,6 @@
 
     <main id="main">
         <section>
-
-            <div class="row justify-content-start">
-                <div class="col-md-3 newItem" style="width:fit-content; margin-left:30px;">
-                    <h2><a href="class.html">Back</a></h2>
-                </div>
-            </div>
-
             <div class="gallery">
                 <div class="thumbnails"></div>
                 <div class="preview">
@@ -162,11 +154,11 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        const imagePath = "assets/img/knitAndNatter/";
+        const imagePath = "assets/img/partickPluckers/";
 
         const images = [];
 
-        for (let i = 2; i <= 21; i++) {
+        for (let i = 1; i <= 6; i++) {
             const filename = `${i}.jpg`;
             images.push(filename);
         }
@@ -195,6 +187,11 @@
         function showPreview(image) {
             const previewImage = document.getElementById("preview-image");
             previewImage.src = `${imagePath}${image}`;
+        }
+
+        function logout() {
+            window.location.href = 'index.html';
+            alert('You have successfully logged out.');
         }
 
         displayThumbnails();
